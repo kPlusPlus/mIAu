@@ -5,7 +5,8 @@
         Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
         For details, see http://go.microsoft.com/fwlink/?LinkID=617521
     -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">    
 
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
@@ -25,12 +26,13 @@
             <button id="changeColor">Change Color</button>
         </div>
             -->
-        <div>
+        
             <h1 style="color:brown;font-size:24px;">mIAu 0.0000001</h1>
             Nane:   <input type="text" value="" id="name" /><br />
             Surname: <input type="text" value="" id="surname" /><br />
-            Date Of Birth: <input type="text" value="" id="birthdate" /><br /> <!-- plugin calendar -->
-            Birth Time: <input type="text" value="" id="birthtime" /><br /> <!-- plugin watch -->
+            TEST:<input type="text" onclick="calendar()" /><br />
+            Date Of Birth:  <input type="date" id="birthdate" /><br />
+            Birth Time: <input type="time" value="" id="birthtime" /><br /> <!-- plugin watch -->
             Birth Location:
             <!-- REST API return all cities for region, country -->
             <select>
@@ -39,14 +41,14 @@
                 <option id="234">London</option>
                 <option id="456">Paris</option>
             </select><br />
-
-            Long:<input type="text" id="lon4" />
-            Lat:<input type="text" id="lat4" />
-
-        </div>
+            Long:<input type="text" id="lon4" style="width:80px;" /> Lat:<input type="text" id="lat4" style="width:80px;" /><br />
+        
     </div>
+
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="scripts/platformOverrides.js"></script>
     <script type="text/javascript" src="scripts/index.js"></script>
+    
+
 </body>
 </html>
