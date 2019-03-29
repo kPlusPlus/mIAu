@@ -6,6 +6,7 @@
         "cordova-android": "^7.1.4",
         "cordova-ios": "4.2.0",
         "cordova-plugin-calendar": "^5.1.4",
+        "cordova-plugin-datepicker": "^0.9.3",
         "cordova-plugin-whitelist": "1.2.2",
         "cordova-windows": "4.4.2"
     },
@@ -20,7 +21,8 @@
                 "CALENDAR_USAGE_DESCRIPTION": " ",
                 "CONTACTS_USAGE_DESCRIPTION": " "
             },
-            "cordova-plugin-whitelist": {}
+            "cordova-plugin-whitelist": {},
+            "cordova-plugin-datepicker": {}
         }
     }
 }
