@@ -1,20 +1,15 @@
 {
-  "prepare_queue": {
-    "installed": [],
-    "uninstalled": []
-  },
-  "config_munge": {
-    "files": {}
-  },
-  "installed_plugins": {
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "io.cordova.myappd03003"
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
     },
-    "cordova-plugin-calendar": {
-      "CALENDAR_USAGE_DESCRIPTION": " ",
-      "CONTACTS_USAGE_DESCRIPTION": " ",
-      "PACKAGE_NAME": "io.cordova.myappd03003"
-    }
-  },
-  "dependent_plugins": {}
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "io.cordova.myappd03003"
+        }
+    },
+    "dependent_plugins": {}
 }
