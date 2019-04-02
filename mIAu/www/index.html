@@ -16,23 +16,43 @@
     <title>mIAu</title>
 </head>
 <body>
-    <div class="app">        
-            <h1 style="color:brown;font-size:24px;align-content:center">mIAu 0.0000001</h1>
-            Nane:   <input type="text" value="" id="name" /><br />
-            Surname: <input type="text" value="" id="surname" /><br />
-            TEST:<input type="text" onclick="calendar()" /><br />
-            Date Of Birth:  <input type="date" id="birthdate" /><br />
-            Birth Time: <input type="time" value="" id="birthtime" /><br /> <!-- plugin watch -->
-            Birth Location:
-            <!-- REST API return all cities for region, country -->
-            <select>
-                <option id="0"> SELECT </option>
-                <option id="123">Wiena</option>
-                <option id="234">London</option>
-                <option id="456">Paris</option>
-            </select><br />
-            Long:<input type="text" id="lon4" style="width:80px;" /> Lat:<input type="text" id="lat4" style="width:80px;" /><br />
-        
+    <div class="app">
+        <h1 style="color:brown;font-size:24px;align-content:center">mIAu 0.0000001</h1>
+        Nane:   <input type="text" value="" id="name" /><br />
+        Surname: <input type="text" value="" id="surname" /><br />        
+        Date Of Birth:  <input type="date" id="birthdate" /><br />
+        Birth Time: <input type="time" value="" id="birthtime" /><br /> <!-- plugin watch -->
+        Birth Location:
+        <!-- REST API return all cities for region, country -->
+        <select>
+            <option value="0"> SELECT </option>
+            <option value="123">Wiena</option>
+            <option value="234">London</option>
+            <option value="456">Paris</option>
+        </select><br />
+        Long:<input type="text" id="lon4" style="width:80px;" /> Lat:<input type="text" id="lat4" style="width:80px;" /><br />
+        I am:
+        <select id="iam">
+            <option value="">Select</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+        </select><br />
+        Searching for:<select id="searchfor">
+            <option value="">Select</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+        </select><br />
+        Relation: <select id="relation">
+            <option value="">Select</option>
+            <option value="1">Friend</option>
+            <option value="2">Party</option>
+            <option value="3">Love</option>
+            <option value="4">Marriage</option>
+            <option value="5">Soulmate</option>
+        </select><br />
+        Email: <input type="email" id="email" />
+
+
     </div>
 
     <script type="text/javascript" src="cordova.js"></script>
