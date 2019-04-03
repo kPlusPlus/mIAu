@@ -2,7 +2,7 @@
 <widget xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps" id="io.cordova.myappd03003" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" defaultlocale="en-US" windows-packageVersion="0.0.0.1" android-versionCode="0">
   <name>mIAu</name>
   <description>mIAu</description>
-  <author href="http://cordova.io" email="dev@cordova.apache.org">kplusplus</author>
+  <author href="http://cordova.io" email="kresimir.ivkovic@windowslive.com">kplusplus</author>
   <vs:template-name>BlankJS</vs:template-name>
   <vs:toolsetVersion>6.3.1</vs:toolsetVersion>
   <engine name="android" spec="5.2.1" />
@@ -110,4 +110,5 @@
   <preference name="ShowTitle" value="True" />
   <preference name="Fullscreen" value="True" />
   <plugin name="cordova-plugin-datepicker" spec="~0.9.3" />
+  <plugin name="cordova-plugin-statusbar" spec="~2.4.2" />
 </widget>

@@ -32,7 +32,7 @@ body {
     top: 50%;
     */
     height: 90%;                  
-    width: 600px;                   
+    width: 95%;
     /*text-align: center;*/
     padding: 180px 0px 0px 0px;     
     /*margin: -115px 0px 0px -112px;*/
@@ -89,4 +89,11 @@ h1 {
 .blink {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
+}
+
+.footer {
+    clear: both;
+    position: relative;
+    height: 40px;
+    margin-top: -40px;
 }

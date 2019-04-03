@@ -5,8 +5,8 @@
         Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
         For details, see http://go.microsoft.com/fwlink/?LinkID=617521
     -->
-    
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">    
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
 
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
@@ -14,22 +14,33 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <title>mIAu</title>
+
+    <!-- jQuery section -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+    <script src="scripts/jquery-1.11.1.min.js"></script>
+    <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
+
 </head>
 <body>
-    <div class="app">
-        <h1 style="color:brown;font-size:24px;align-content:center">mIAu 0.0000001</h1>
+    <div data-role="page" class="app" id="app">
+        <div data-role="header">
+            mIAu 0.0000001
+        </div>
         Nane:   <input type="text" value="" id="name" /><br />
-        Surname: <input type="text" value="" id="surname" /><br />        
+        Surname: <input type="text" value="" id="surname" /><br />
         Date Of Birth:  <input type="date" id="birthdate" /><br />
         Birth Time: <input type="time" value="" id="birthtime" /><br /> <!-- plugin watch -->
-        Birth Location:
-        <!-- REST API return all cities for region, country -->
-        <select>
-            <option value="0"> SELECT </option>
-            <option value="123">Wiena</option>
-            <option value="234">London</option>
-            <option value="456">Paris</option>
-        </select><br />
+        Country: <div id="divcountry"></div>
+        Birth Location:        
+        <div id="divcity">
+            <select id="selcity">
+                <option value="0"> SELECT </option>
+                <option value="123">Wiena</option>
+                <option value="234">London</option>
+                <option value="456">Paris</option>
+            </select><br />
+        </div>
         Long:<input type="text" id="lon4" style="width:80px;" /> Lat:<input type="text" id="lat4" style="width:80px;" /><br />
         I am:
         <select id="iam">
@@ -51,14 +62,18 @@
             <option value="5">Soulmate</option>
         </select><br />
         Email: <input type="email" id="email" />
+        <button id="test">STISNI</button>
 
-
+        <div data-role="footer" id="footer">
+            <h1>&copy; Copyright 2019</h1>
+        </div>
     </div>
+
 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="scripts/platformOverrides.js"></script>
     <script type="text/javascript" src="scripts/index.js"></script>
-    
+
 
 </body>
 </html>
