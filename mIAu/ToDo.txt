@@ -1,1 +1,3 @@
-﻿prebaci ovo na Git
+﻿
+prilagodi stil
+popravi da radi android compiler
