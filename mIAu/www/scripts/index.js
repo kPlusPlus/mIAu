@@ -65,9 +65,16 @@ function TakeAll() {
 function TakeCountry()
 {
     //$("#divcountry").empty();
-    $.get("http://159.69.113.252/~kapluspl/tmp/countrylist.php", function (data) {
-        $("#divcountry").html(data);
-        alert('Load was performed.');
+
+    $.ajax({
+        url: 'http://159.69.113.252/~kapluspl/tmp/countrylist.php',
+        cache: false,
+        success: function (data) {
+            $("#divcountry").html(data);
+        },
+        fail: function (data) {
+            alert('Err 4. Country list');
+        }
     });
 
 }
