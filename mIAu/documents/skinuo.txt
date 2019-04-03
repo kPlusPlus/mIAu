@@ -1,0 +1,2 @@
+http://download.geonames.org/export/zip/
+allCountries.txt
