@@ -75,7 +75,7 @@ function TakeCountry()
         fail: function (data) {
             alert('Err 4. Country list');
         }
-    });
+    });    
 
 }
 
