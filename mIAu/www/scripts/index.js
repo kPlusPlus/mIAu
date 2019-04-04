@@ -4,7 +4,7 @@ $(document).on('pagecreate', '#app', function () {
 });
 
 
-$(document).on("tap", "#btnCountry", function () {    
+$(document).on("tap", "#btnCountry", function () {
     TakeCountry();
     //alert("ALL RIGHT");
 });
@@ -26,16 +26,19 @@ $(document).on("change", "#selcountry", function () {
     //alert("WORKING...");
     var codecountry;
     codecountry = $("#selcountry").select().val();
-    TakeCity(codecountry);
+    if (codecountry.length > 1)
+        TakeCity(codecountry);
 });
-
 
 // When select city copy cordinate
-$("#selcity").change(function () {
-    var lo, la;
-    alert("Working");
+$(document).on('change', "#selcity", function () {
+    alert("WORKING");
+    var opt = $('#selcity option:selected');
+    var lo = opt.attr("lon4");
+    var la = opt.attr("lat4");
+    $("#lon4").val(lo);
+    $("#lat4").val(la);
 });
-
 
 function TakeAll() {
 
@@ -52,8 +55,7 @@ function TakeAll() {
 
 }
 
-function TakeCountry()
-{
+function TakeCountry() {
     //$("#divcountry").empty();
 
     $.ajax({
@@ -65,21 +67,21 @@ function TakeCountry()
         fail: function (data) {
             alert('Err 4. Country list problem');
         }
-    });    
+    });
 
 }
 
 function TakeCity(codecountry) {
     $.ajax({
         url: 'http://159.69.113.252/~kapluspl/tmp/citieslist.php',
-        data: { "country" : codecountry },              // $('#formA').serialize(),
+        data: { "country": codecountry },              // $('#formA').serialize(),
         type: "POST",
-        success: function (data) {            
-            $("#divcity").html(data);            
+        success: function (data) {
+            $("#divcity").html(data);
         },
         fail: function (data) {
             alert('Err 6. Internet connection problem');
         }
-        
-    });   
+
+    });
 }
