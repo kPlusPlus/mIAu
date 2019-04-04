@@ -6,6 +6,7 @@
   <vs:template-name>BlankJS</vs:template-name>
   <content src="index.html" />
   <access origin="*" />
+  <access origin="http://159.69.113.252/*" />
   <preference name="SplashScreen" value="screen" />
   <preference name="windows-target-version" value="10.0" />
   <allow-intent href="http://*/*" />
