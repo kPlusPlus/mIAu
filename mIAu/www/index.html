@@ -5,10 +5,9 @@
         Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
         For details, see http://go.microsoft.com/fwlink/?LinkID=617521
     -->
-
-<!--
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
--->
+    <!--
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    -->
 
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no">
@@ -49,37 +48,51 @@
             <label for="divcountry">Country:</label>
             <button id="btnCountry">Get country </button> <div id="divcountry"></div>
         </div>
-        Birth Location:
-        <div id="divcity">
-            <select id="selcity">
-                <option value="0"> SELECT </option>
-                <option value="123">Wiena</option>
-                <option value="234">London</option>
-                <option value="456">Paris</option>
-            </select><br />
+        <div data-role="fieldcontain">
+            <label for="divcity">Birth Location:</label>
+            <div id="divcity">
+                <select id="selcity">
+                    <option value="0"> SELECT </option>
+                    <option value="123">Wiena</option>
+                    <option value="234">London</option>
+                    <option value="456">Paris</option>
+                </select><br />
+            </div>
         </div>
-        Long:<input type="text" id="lon4" style="width:80px;" /> Lat:<input type="text" id="lat4" style="width:80px;" /><br />
-        I am:
-        <select id="iam">
-            <option value="">Select</option>
-            <option value="1">Male</option>
-            <option value="2">Female</option>
-        </select><br />
-        Searching for:<select id="searchfor">
-            <option value="">Select</option>
-            <option value="1">Male</option>
-            <option value="2">Female</option>
-        </select><br />
-        Relation: <select id="relation">
-            <option value="">Select</option>
-            <option value="1">Friend</option>
-            <option value="2">Party</option>
-            <option value="3">Love</option>
-            <option value="4">Marriage</option>
-            <option value="5">Soulmate</option>
-        </select><br />
-        Email: <input type="email" id="email" />
-        <button id="test">STISNI</button>
+        <div data-role="fieldcontain">
+            <label for="lon4">Long:</label><input type="text" id="lon4" style="width:80px;" /><label for="lat4">Lat:</label><input type="text" id="lat4" style="width:80px;" /><br />
+        </div>
+        <div data-role="fieldcontain">
+            <label for="iam">I am:</label>
+            <select id="iam">
+                <option value="">Select</option>
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+            </select>
+        </div>
+        <div data-role="fieldcontain">
+            <label for="searchfor">Searching for:</label>
+            <select id="searchfor">
+                <option value="">Select</option>
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+            </select>
+        </div>
+        <div data-role="fieldcontain">
+            <label for="relation">Relation:</label>
+            <select id="relation">
+                <option value="">Select</option>
+                <option value="1">Friend</option>
+                <option value="2">Party</option>
+                <option value="3">Love</option>
+                <option value="4">Marriage</option>
+                <option value="5">Soulmate</option>
+            </select>
+        </div>
+        <div data-role="fieldcontain">
+            <label for="email">Email:</label><input type="email" id="email" />
+        </div>
+        <button id="btnSub">SUBMIT</button>
 
         <div data-role="footer" id="footer">
             <h1>&copy; Copyright 2019</h1>

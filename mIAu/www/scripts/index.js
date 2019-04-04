@@ -1,13 +1,10 @@
 ﻿
 $(document).on('pagecreate', '#app', function () {
-    //alert('Network error has occurred please try again!');
-    //alert("START NOW");
-    //TakeAll();
+    //code
 });
 
 
 $(document).on("tap", "#btnCountry", function () {    
-    //alert("hehehe");
     TakeCountry();
     //alert("ALL RIGHT");
 });
@@ -33,21 +30,14 @@ $(document).on("change", "#selcountry", function () {
 });
 
 
+// When select city copy cordinate
+$("#selcity").change(function () {
+    var lo, la;
+    alert("Working");
+});
+
+
 function TakeAll() {
-
-    //$("#divcity").empty();
-    //$("#divcountry").empty();
-
-    /*
-    $.get("http://159.69.113.252/~kapluspl/tmp/citieslist.php", function (data) {
-        $("#divcity").html(data);
-        //alert("Load was performed.");
-    });
-
-    $.get("http://159.69.113.252/~kapluspl/tmp/countrylist.php", function (data) {
-        $("#divcountry").html(data);
-    });
-    */
 
     $.ajax({
         url: 'http://159.69.113.252/~kapluspl/tmp/countrylist.php',
@@ -73,7 +63,7 @@ function TakeCountry()
             $("#divcountry").html(data);
         },
         fail: function (data) {
-            alert('Err 4. Country list');
+            alert('Err 4. Country list problem');
         }
     });    
 
