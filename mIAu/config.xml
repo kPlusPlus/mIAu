@@ -94,4 +94,5 @@
   <engine name="windows" spec="4.4.2" />
   <preference name="AndroidLaunchMode" value="standard" />
   <preference name="BackupWebStorage" value="local" />
+  <plugin name="cordova-plugin-dialogs" spec="~2.0.1" />
 </widget>
