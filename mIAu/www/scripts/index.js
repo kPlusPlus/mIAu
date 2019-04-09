@@ -33,7 +33,7 @@ $(document).on("change", "#selcountry", function () {
 
 // When select city copy cordinate
 $(document).on('change', "#selcity", function () {
-    alert("WORKING");
+    //alert("WORKING");
     var opt = $('#selcity option:selected');
     var lo = opt.attr("lon4");
     var la = opt.attr("lat4");
@@ -78,7 +78,7 @@ function TakeCountry() {
         url: 'http://159.69.113.252/~kapluspl/tmp/countrylist.php',
         cache: false,
         success: function (data) {
-            $("#divcountry").html(data);
+            $("#divcountry").html(data).trigger('create');;
         },
         fail: function (data) {
             alert('Err 4. Country list problem');
@@ -93,7 +93,7 @@ function TakeCity(codecountry) {
         data: { "country": codecountry },              // $('#formA').serialize(),
         type: "POST",
         success: function (data) {
-            $("#divcity").html(data);
+            $("#divcity").html(data).trigger('create');
         },
         fail: function (data) {
             alert('Err 6. Internet connection problem');
