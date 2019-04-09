@@ -6,6 +6,7 @@ $(document).on('pagecreate', '#app', function () {
 
 $(document).on("tap", "#btnCountry", function () {
     TakeCountry();
+    return false;
     //alert("ALL RIGHT");
 });
 
@@ -38,6 +39,21 @@ $(document).on('change', "#selcity", function () {
     var la = opt.attr("lat4");
     $("#lon4").val(lo);
     $("#lat4").val(la);
+});
+
+$("#btnsub").tap(function () {
+    $.ajax({
+        url: 'http://159.69.113.252/~kapluspl/tmp/memby.php',
+        data: $("#forma").serialize(),        
+        cache: false,
+        type: "POST",
+        success: function (data) {
+            alert("OK " + data);
+        },
+        fail: function (data) {
+            alert("error 7. no enter user " + data);
+        }
+    });
 });
 
 function TakeAll() {
