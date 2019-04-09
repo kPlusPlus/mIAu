@@ -29,82 +29,99 @@
 </head>
 <body>
     <div data-role="page" id="app" data-theme="b" style="margin:5px;">
-        <form id="forma">
+        
             <div data-role="header" data-position="fixed" data-theme="e">
-                <a href="#">Panel</a>
-                <a href="rules.html" data-transition="pop">Rule</a>
-                <a href="public.html" data-transition="pop">Public</a>
+                <button id="btnpublic">Public</button>               
+                
                 <h1>mIAu 0.0000002</h1>
-                <a href="index.html" data-icon="gear" class="ui-btn-right">Options</a>
+                <button id="btnhome" name="btnhome" data-icon="home" data-iconshadow="true">Home</button>
             </div>
-            <div data-role="fieldcontain">
-                <label for="name">Name:</label>
-                <input type="text" value="" id="name" name="name" placeholder="your name" required />
+            <div  id="body1" name="body1">
+                <form id="forma">
+                    <div data-role="fieldcontain">
+                        <label for="name">Name:</label>
+                        <input type="text" value="" id="name" name="name" placeholder="your name" required />
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="surname"> Surname:</label>
+                        <input type="text" value="" id="surname" name="surname" placeholder="your surname" required />
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="birthdate">Date Of Birth:</label>
+                        <input type="date" id="birthdate" name="birthdate" required />
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="birthtime">Birth Time:</label>
+                        <input type="time" value="" id="birthtime" name="birthtime" required />
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="divcountry">Country of Birth:</label>
+                        <button id="btnCountry">Get country </button> <div id="divcountry">
+                        </div>
+                        <div id="waitcity" style="display:none;width:69px;height:89px;border:1px solid black;position:absolute;top:50%;left:50%;padding:2px;z-index:100;"><img src="images/demo_wait.gif" width="64" height="64" /><br>Loading..</div>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="divcity">Place of Birth:</label>
+                        <div id="divcity">
+
+                        </div>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="lon4">Long:</label><input type="text" id="lon4" style="width:80px;" /><label for="lat4">Lat:</label><input type="text" id="lat4" style="width:80px;" /><br />
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="iam">I am (Gender):</label>
+                        <select id="iam" name="iam">
+                            <option value="">Select</option>
+                            <option value="1">Male</option>
+                            <option value="2">Female</option>
+                        </select>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="searchfor">Searching for (Gender):</label>
+                        <select id="searchfor" name="searchfor">
+                            <option value="">Select</option>
+                            <option value="1">Male</option>
+                            <option value="2">Female</option>
+                        </select>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="relation">Relation:</label>
+                        <select id="relation" name="relation">
+                            <option value="">Select</option>
+                            <option value="1">Friend</option>
+                            <option value="2">Party</option>
+                            <option value="3">Love</option>
+                            <option value="4">Marriage</option>
+                            <option value="5">Soulmate</option>
+                        </select>
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="email">Email:</label><input type="email" id="email" name="email" placeholder="your email" required />
+                    </div>
+                    <button id="btnsub" data-icon="check">SAVE</button>
+                    <button id="btntest" data-icon="gear">TEST</button>
+                </form>
             </div>
-            <div data-role="fieldcontain">
-                <label for="surname"> Surname:</label>
-                <input type="text" value="" id="surname" name="surname" placeholder="your surname" required />
-            </div>
-            <div data-role="fieldcontain">
-                <label for="birthdate">Date Of Birth:</label>
-                <input type="date" id="birthdate" name="birthdate" required />
-            </div>
-            <div data-role="fieldcontain">
-                <label for="birthtime">Birth Time:</label>
-                <input type="time" value="" id="birthtime" name="birthtime" required />
-            </div>
-            <div data-role="fieldcontain">
-                <label for="divcountry">Country of Birth:</label>
-                <button id="btnCountry">Get country </button> <div id="divcountry">
-                </div>
-                <div id="waitcity" style="display:none;width:69px;height:89px;border:1px solid black;position:absolute;top:50%;left:50%;padding:2px;z-index:100;"><img src="images/demo_wait.gif" width="64" height="64" /><br>Loading..</div>
-            </div>
-            <div data-role="fieldcontain">
-                <label for="divcity">Place of Birth:</label>
-                <div id="divcity">
+
+            <div id="body2" name="body2" style="display:none;">
+                <button id="getPosition" name="=getPosition">CURRENT POSITION</button>
+                <button id="watchPosition" name="watchPosition">WATCH POSITION</button>
+                <button id="btntest2">TEST</button>
+
+                userid: <input type="text" id="userid" name="userid" />
+
+                <div>
+                    <iframe id="mapaa" width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=280&w=325&cp=45.813~15.977899999999998&lvl=11&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no"></iframe>
 
                 </div>
-            </div>
-            <div data-role="fieldcontain">
-                <label for="lon4">Long:</label><input type="text" id="lon4" style="width:80px;" /><label for="lat4">Lat:</label><input type="text" id="lat4" style="width:80px;" /><br />
-            </div>
-            <div data-role="fieldcontain">
-                <label for="iam">I am (Gender):</label>
-                <select id="iam" name="iam">
-                    <option value="">Select</option>
-                    <option value="1">Male</option>
-                    <option value="2">Female</option>
-                </select>
-            </div>
-            <div data-role="fieldcontain">
-                <label for="searchfor">Searching for (Gender):</label>
-                <select id="searchfor" name="searchfor">
-                    <option value="">Select</option>
-                    <option value="1">Male</option>
-                    <option value="2">Female</option>
-                </select>
-            </div>
-            <div data-role="fieldcontain">
-                <label for="relation">Relation:</label>
-                <select id="relation" name="relation">
-                    <option value="">Select</option>
-                    <option value="1">Friend</option>
-                    <option value="2">Party</option>
-                    <option value="3">Love</option>
-                    <option value="4">Marriage</option>
-                    <option value="5">Soulmate</option>
-                </select>
-            </div>
-            <div data-role="fieldcontain">
-                <label for="email">Email:</label><input type="email" id="email" name="email" placeholder="your email" required />
-            </div>
-            <button id="btnsub" data-icon="check">SAVE</button>
 
+            </div>
 
             <div data-role="footer" id="footer">
                 <h1>&copy; Copyright 2019</h1>
             </div>
-        </form>
+        
     </div>
 
 
