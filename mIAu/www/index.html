@@ -31,25 +31,26 @@
     <div data-role="page" id="app" data-theme="b" style="margin:5px;">
         <form id="forma">
             <div data-role="header" data-position="fixed" data-theme="e">
-                <a href="#" class="ui-btn panel">Panel</a>
+                <a href="#">Panel</a>
+                <a href="rules.html">Rule</a>
                 <h1>mIAu 0.0000002</h1>
                 <a href="index.html" data-icon="gear" class="ui-btn-right">Options</a>
             </div>
             <div data-role="fieldcontain">
                 <label for="name">Name:</label>
-                <input type="text" value="" id="name" name="name" placeholder="your name" />
+                <input type="text" value="" id="name" name="name" placeholder="your name" required />
             </div>
             <div data-role="fieldcontain">
                 <label for="surname"> Surname:</label>
-                <input type="text" value="" id="surname" name="surname" placeholder="your surname" />
+                <input type="text" value="" id="surname" name="surname" placeholder="your surname" required />
             </div>
             <div data-role="fieldcontain">
                 <label for="birthdate">Date Of Birth:</label>
-                <input type="date" id="birthdate" name="birthdate" />
+                <input type="date" id="birthdate" name="birthdate" required />
             </div>
             <div data-role="fieldcontain">
                 <label for="birthtime">Birth Time:</label>
-                <input type="time" value="" id="birthtime" name="birthtime" />
+                <input type="time" value="" id="birthtime" name="birthtime" required />
             </div>
             <div data-role="fieldcontain">
                 <label for="divcountry">Country of Birth:</label>
@@ -94,9 +95,10 @@
                 </select>
             </div>
             <div data-role="fieldcontain">
-                <label for="email">Email:</label><input type="email" id="email" name="email" placeholder="your email" />
+                <label for="email">Email:</label><input type="email" id="email" name="email" placeholder="your email" required />
             </div>
             <button id="btnsub" data-icon="check">SAVE</button>
+
 
             <div data-role="footer" id="footer">
                 <h1>&copy; Copyright 2019</h1>

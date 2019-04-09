@@ -10,25 +10,16 @@ function onDeviceReady() {
 
 $(document).on("tap", "#btnCountry", function () {
     TakeCountry();
-    return false;
-    //alert("ALL RIGHT");
+    return false;    
 });
 
-/*
-$("#btnCountry").tap(function () {
-    //alert("H1 234");
-    //TakeAll();
-    TakeCountry();
-});
-*/
 
 $("#btnTest").tap(function () {
     alert("RRR");
     TakeAll();
 })
 
-$(document).on("change", "#selcountry", function () {
-    //alert("WORKING...");
+$(document).on("change", "#selcountry", function () {    
     var codecountry;
     codecountry = $("#selcountry").select().val();
     if (codecountry.length > 1)
@@ -61,7 +52,6 @@ $("#btnsub").tap(function () {
 });
 
 function TakeAll() {
-
     $.ajax({
         url: 'http://159.69.113.252/~kapluspl/tmp/countrylist.php',
         cache: false,
@@ -72,12 +62,9 @@ function TakeAll() {
             alert('Err 4. Country list');
         }
     });
-
 }
 
-function TakeCountry() {
-    //$("#divcountry").empty();
-    
+function TakeCountry() {    
     $.ajax({
         url: 'http://159.69.113.252/~kapluspl/tmp/countrylist.php',
         cache: false,
@@ -88,8 +75,6 @@ function TakeCountry() {
             alert('Err 4. Country list problem');
         }
     });
-    
-
 }
 
 $(document).ajaxStart(function () {
@@ -100,8 +85,6 @@ $(document).ajaxComplete(function () {
 });
 
 function TakeCity(codecountry) {
-    
-
     $.ajax({
         url: 'http://159.69.113.252/~kapluspl/tmp/citieslist.php',
         data: { "country": codecountry },              // $('#formA').serialize(),
@@ -112,8 +95,5 @@ function TakeCity(codecountry) {
         fail: function (data) {
             alert('Err 6. Internet connection problem');
         }
-
     });
-
-    
 }
