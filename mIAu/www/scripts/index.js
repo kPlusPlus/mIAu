@@ -97,3 +97,8 @@ function TakeCity(codecountry) {
         }
     });
 }
+
+
+$("#btntest").tap(function () {
+    alert("EEEEE");
+});
