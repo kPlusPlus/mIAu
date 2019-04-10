@@ -129,7 +129,7 @@ $("#watchPosition").tap(function () {
     watchPosition();
 });
 
-
+var lat, lon;
 function getPosition() {
     var options = {
         enableHighAccuracy: true,
@@ -146,6 +146,8 @@ function getPosition() {
             'Heading: ' + position.coords.heading + '\n' +
             'Speed: ' + position.coords.speed + '\n' +
             'Timestamp: ' + position.timestamp + '\n');
+        lat = position.coords.latitude;
+        lon = position.coords.longitude;
     };
 
     function onError(error) {
@@ -177,3 +179,18 @@ function watchPosition() {
         alert('code: ' + error.code + '\n' + 'message: ' + error.message + '\n');
     }
 }
+
+$("#btntestAA").tap(function () {
+    getPosition();
+
+    GetMap();
+});
+
+var map;
+function GetMap() {
+    var map;
+    function loadMapScenario() {
+        map = new Microsoft.Maps.Map(document.getElementById('divmapa'), {});
+    }
+}
+
