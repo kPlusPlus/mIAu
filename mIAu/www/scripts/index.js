@@ -1,4 +1,10 @@
-﻿$(document).on("tap", "#btnCountry", function () {
+﻿function onLoad() {
+    //document.addEventListener("deviceready", onDeviceReady, false);
+    map = new Microsoft.Maps.Map(document.getElementById('divmapa'), {});
+    //alert($("#divmapa").html);
+}
+
+$(document).on("tap", "#btnCountry", function () {
     TakeCountry();
     return false;    
 });
@@ -181,16 +187,27 @@ function watchPosition() {
 }
 
 $("#btntestAA").tap(function () {
-    getPosition();
+    //getPosition();
 
     GetMap();
 });
 
 var map;
 function GetMap() {
-    var map;
+    
+    //var map;
     function loadMapScenario() {
         map = new Microsoft.Maps.Map(document.getElementById('divmapa'), {});
-    }
+    }    
+    /*
+    var map = new Microsoft.Maps.Map(document.getElementById('divmapa'), {
+        
+        center: new Microsoft.Maps.Location(51.50632, -0.12714),
+        mapTypeId: Microsoft.Maps.MapTypeId.aerial,
+        zoom: 10
+    });
+    */
+    
+
 }
 
