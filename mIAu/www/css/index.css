@@ -22,6 +22,7 @@ body {
     background-color: #32383d;
     font-family: 'RobotoRegular', 'Droid Sans', 'Segoe UI', Segoe, 'San Francisco', 'Helvetica Neue', Helvetica, Arial, Geneva, sans-serif;
     font-size: 12px;
+    margin: 2%;
 }
 
 .app {

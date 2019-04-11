@@ -25,7 +25,9 @@
     <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
     <script src="scripts/jquery-1.11.1.min.js"></script>
     <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
+    <!--
     <script src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"></script>
+        -->
 
 
     <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=AusV1uMb4S4PqNZj3miJ4KX2HkfIoZzGHu8ZUfGN7RxCP2y41-OHeWMtBEAHLr3I'></script>
@@ -37,7 +39,7 @@
     <div data-role="page" id="app" data-theme="b" style="margin:5px;">
         
             <div data-role="header" data-position="fixed" data-theme="e">
-                <button id="btnpublic">Public</button>               
+                <button id="btnpublic" data-icon="search">Public</button>
                 
                 <h1>mIAu 0.0000002</h1>
                 <button id="btnhome" name="btnhome" data-icon="home" data-iconshadow="true">Home</button>
@@ -113,16 +115,18 @@
             <div id="body2" name="body2" style="display:none;">
                 <button id="getPosition" name="=getPosition">CURRENT POSITION</button>
                 <button id="watchPosition" name="watchPosition">WATCH POSITION</button>
-                <button id="btntestAA">TEST</button>
+                <button id="btnmypos">my position</button>
 
-                userid: <input type="text" id="userid" name="userid" />
+                userid: <input type="text" id="userid" name="userid" value="100" />
+                lat: <input type="text" id="gamelat" name="gamelat" value="101" />
+                lon: <input type="text" id="gamelon" name="gamelon" value="102" />
 
-                        <div id="divmapa" style="width:500px;height:400px;">
-                            <!--
-    <iframe id="mapaa" width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=280&w=325&cp=45.813~15.977899999999998&lvl=11&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="yes"></iframe>
-        -->
 
-                        </div>
+                <div id="divmapa" style="width:500px;height:400px;">
+                    <!--
+        <iframe id="mapaa" width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=280&w=325&cp=45.813~15.977899999999998&lvl=11&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="yes"></iframe>
+            -->
+                </div>
 
             </div>
 
