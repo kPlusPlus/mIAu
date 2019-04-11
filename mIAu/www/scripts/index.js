@@ -1,7 +1,5 @@
-﻿function onLoad() {
-    //document.addEventListener("deviceready", onDeviceReady, false);
-    map = new Microsoft.Maps.Map(document.getElementById('divmapa'), {});
-    //alert($("#divmapa").html);
+﻿function onLoad() {    
+    map = new Microsoft.Maps.Map(document.getElementById('divmapa'), {});    
 }
 
 $(document).on("tap", "#btnCountry", function () {
@@ -12,7 +10,7 @@ $(document).on("tap", "#btnCountry", function () {
 
 $("#btnTest").tap(function () {
     alert("RRR");
-    TakeAll();
+    //TakeAll();
 })
 
 $(document).on("change", "#selcountry", function () {    
@@ -186,27 +184,37 @@ function watchPosition() {
     }
 }
 
-$("#btntestAA").tap(function () {
-    //getPosition();
+$("#btnmypos").tap(function () {
+    //GetMap();
+    //getPosition();    
 
-    GetMap();
+
+    var ops = document.getElementById("userid");
+    ops.value = 1001;
+    alert(ops.value);
+
+    $("#userid").value = 1002;
+    $("#gamelat").html(123);
+    $("#gamelon").html(123);    
+    
 });
 
 var map;
 function GetMap() {
     
-    //var map;
-    function loadMapScenario() {
-        map = new Microsoft.Maps.Map(document.getElementById('divmapa'), {});
-    }    
-    /*
-    var map = new Microsoft.Maps.Map(document.getElementById('divmapa'), {
-        
-        center: new Microsoft.Maps.Location(51.50632, -0.12714),
-        mapTypeId: Microsoft.Maps.MapTypeId.aerial,
-        zoom: 10
+    //Request the user's location
+    navigator.geolocation.getCurrentPosition(function (position) {
+        var loc = new Microsoft.Maps.Location(
+            position.coords.latitude,
+            position.coords.longitude);
+
+        //Add a pushpin at the user's location.
+        var pin = new Microsoft.Maps.Pushpin(loc);
+        map.entities.push(pin);
+
+        //Center the map on the user's location.
+        map.setView({ center: loc, zoom: 15 });
     });
-    */
     
 
 }
