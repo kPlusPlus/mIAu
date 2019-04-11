@@ -155,7 +155,7 @@ function getPosition() {
     };
 
     function onError(error) {
-        alert('code: ' + error.code + '\n' + 'message: ' + error.message + '\n');
+        alert('code 12 : ' + error.code + '\n' + 'message: ' + error.message + '\n');
     }
 }
 
@@ -185,17 +185,12 @@ function watchPosition() {
 }
 
 $("#btnmypos").tap(function () {
-    //GetMap();
-    //getPosition();    
-
-
-    var ops = document.getElementById("userid");
-    ops.value = 1001;
-    alert(ops.value);
-
-    $("#userid").value = 1002;
-    $("#gamelat").html(123);
-    $("#gamelon").html(123);    
+    getPosition();
+    GetMap();
+    
+    $("#userid").val(10);
+    $("#gamelat").val(lat);
+    $("#gamelon").val(lon);
     
 });
 
