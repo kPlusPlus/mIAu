@@ -9,9 +9,9 @@ function ajaxCall() {
         var errorRes = function(e) {
             console.log(e);
             //alert("Error found \nError Code: "+e.status+" \nError Message: "+e.statusText);
-            //jQuery('#loader').modal('hide');
+            //$('#loader').modal('hide');
         }
-        jQuery.ajax({
+        $.ajax({
             url: url,
             type: method,
             data: data,
@@ -32,11 +32,11 @@ function locationInfo() {
     var ordering = 'name';
     //now check for set values
     var addParams = '';
-    if(jQuery("#gds_appid").length > 0) {
-        addParams += '&appid=' + jQuery("#gds_appid").val();
+    if($("#gds_appid").length > 0) {
+        addParams += '&appid=' + $("#gds_appid").val();
     }
-    if(jQuery("#gds_hash").length > 0) {
-        addParams += '&hash=' + jQuery("#gds_hash").val();
+    if($("#gds_hash").length > 0) {
+        addParams += '&hash=' + $("#gds_hash").val();
     }
 
     var call = new ajaxCall();
@@ -44,12 +44,12 @@ function locationInfo() {
     this.confCity = function(id) {
      //   console.log(id);
      //   console.log('started');
-        var url = rootUrl+'?type=confCity&countryId='+ jQuery('#countryId option:selected').attr('countryid') +'&stateId=' + jQuery('#stateId option:selected').attr('stateid') + '&cityId=' + id;
+        var url = rootUrl+'?type=confCity&countryId='+ $('#countryId option:selected').attr('countryid') +'&stateId=' + $('#stateId option:selected').attr('stateid') + '&cityId=' + id;
         var method = "post";
-        var data = {};
+        var data = {};        
         call.send(data, url, method, function(data) {
             if(data){
-                //    alert(data);
+                alert(data);
             }
             else{
                 //   alert('No data');
@@ -59,9 +59,9 @@ function locationInfo() {
 
 
     this.getCities = function(id) {
-        jQuery(".cities option:gt(0)").remove();
+        $(".cities option:gt(0)").remove();
         //get additional fields
-        var stateClasses = jQuery('#cityId').attr('class');
+        var stateClasses = $('#cityId').attr('class');
 
         var cC = stateClasses.split(" ");
         cC.shift();
@@ -71,12 +71,12 @@ function locationInfo() {
             acC = cC.join();
             addClasses = '&addClasses=' + encodeURIComponent(acC);
         }
-        var url = rootUrl+'?type=getCities&countryId='+ jQuery('#countryId option:selected').attr('countryid') +'&stateId=' + id + addParams + addClasses;
+        var url = rootUrl+'?type=getCities&countryId='+ $('#countryId option:selected').attr('countryid') +'&stateId=' + id + addParams + addClasses;
         var method = "post";
         var data = {};
-        jQuery('.cities').find("option:eq(0)").html("Please wait..");
+        $('.cities').find("option:eq(0)").html("Please wait..");
         call.send(data, url, method, function(data) {
-            jQuery('.cities').find("option:eq(0)").html("Select City");
+            $('.cities').find("option:eq(0)").html("Select City");
             if(data.tp == 1){
                 if(data.hits > 1000)
                 {
@@ -92,23 +92,23 @@ function locationInfo() {
 
                 if(listlen > 0)
                 {
-                    jQuery.each(data['result'], function(key, val) {
+                    $.each(data['result'], function(key, val) {
 
-                        var option = jQuery('<option />');
+                        var option = $('<option />');
                         option.attr('value', val).text(val);
-                        jQuery('.cities').append(option);
+                        $('.cities').append(option);
                     });
                 }
                 else
                 {
-                    var usestate = jQuery('#stateId option:selected').val();
-                    var option = jQuery('<option />');
+                    var usestate = $('#stateId option:selected').val();
+                    var option = $('<option />');
                     option.attr('value', usestate).text(usestate);
                     option.attr('selected', 'selected');
-                    jQuery('.cities').append(option);
+                    $('.cities').append(option);
                 }
 
-                jQuery(".cities").prop("disabled",false);
+                $(".cities").prop("disabled",false);
             }
             else{
                 alert(data.msg);
@@ -117,10 +117,10 @@ function locationInfo() {
     };
 
     this.getStates = function(id) {
-        jQuery(".states option:gt(0)").remove();
-        jQuery(".cities option:gt(0)").remove();
+        $(".states option:gt(0)").remove();
+        $(".cities option:gt(0)").remove();
         //get additional fields
-        var stateClasses = jQuery('#stateId').attr('class');
+        var stateClasses = $('#stateId').attr('class');
 
         var cC = stateClasses.split(" ");
         cC.shift();
@@ -133,9 +133,9 @@ function locationInfo() {
         var url = rootUrl+'?type=getStates&countryId=' + id + addParams  + addClasses;
         var method = "post";
         var data = {};
-        jQuery('.states').find("option:eq(0)").html("Please wait..");
+        $('.states').find("option:eq(0)").html("Please wait..");
         call.send(data, url, method, function(data) {
-            jQuery('.states').find("option:eq(0)").html("Select State");
+            $('.states').find("option:eq(0)").html("Select State");
             if(data.tp == 1){
                 if(data.hits > 1000)
                 {
@@ -146,13 +146,13 @@ function locationInfo() {
                 {
                     console.log('Daily geodata.solutions request count:' + data.hits + ' of 1000')
                 }
-                jQuery.each(data['result'], function(key, val) {
-                    var option = jQuery('<option />');
+                $.each(data['result'], function(key, val) {
+                    var option = $('<option />');
                     option.attr('value', val).text(val);
                     option.attr('stateid', key);
-                    jQuery('.states').append(option);
+                    $('.states').append(option);
                 });
-                jQuery(".states").prop("disabled",false);
+                $(".states").prop("disabled",false);
             }
             else{
                 alert(data.msg);
@@ -162,7 +162,7 @@ function locationInfo() {
 
     this.getCountries = function() {
         //get additional fields
-        var countryClasses = jQuery('#countryId').attr('class');
+        var countryClasses = $('#countryId').attr('class');
 
         var cC = countryClasses.split(" ");
         cC.shift();
@@ -175,7 +175,8 @@ function locationInfo() {
 
         var presel = false;
         var iip = 'N';
-        jQuery.each(cC, function( index, value ) {
+        
+        $.each(cC, function( index, value ) {
             if (value.match("^presel-")) {
                 presel = value.substring(7);
 
@@ -184,15 +185,14 @@ function locationInfo() {
             {
                 var iip = 'Y';
             }
-        });
-
+        });        
 
         var url = rootUrl+'?type=getCountries' + addParams + addClasses;
         var method = "post";
         var data = {};
-        jQuery('.countries').find("option:eq(0)").html("Please wait..");
+        $('.countries').find("option:eq(0)").html("Please wait..").trigger('create');
         call.send(data, url, method, function(data) {
-            jQuery('.countries').find("option:eq(0)").html("Select Country");
+            $('.countries').find("option:eq(0)").html("Select Country").trigger('create');
 
             if(data.tp == 1){
                 if(data.hits > 1000)
@@ -211,19 +211,19 @@ function locationInfo() {
                 }
 
 
-                if(jQuery.inArray("group-continents",cC) > -1)
+                if($.inArray("group-continents",cC) > -1)
                 {
-                    var $select = jQuery('.countries');
+                    var $select = $('.countries');
                     console.log(data['result']);
-                    jQuery.each(data['result'], function(i, optgroups) {
-                        var $optgroup = jQuery("<optgroup>", {label: i});
+                    $.each(data['result'], function(i, optgroups) {
+                        var $optgroup = $("<optgroup>", {label: i});
                         if(optgroups.length > 0)
                         {
                             $optgroup.appendTo($select);
                         }
 
-                        jQuery.each(optgroups, function(groupName, options) {
-                            var coption = jQuery('<option />');
+                        $.each(optgroups, function(groupName, options) {
+                            var coption = $('<option />');
                             coption.attr('value', options.name).text(options.name);
                             coption.attr('countryid', options.id);
                             if(presel) {
@@ -237,8 +237,8 @@ function locationInfo() {
                 }
                 else
                 {
-                    jQuery.each(data['result'], function(key, val) {
-                        var option = jQuery('<option />');
+                    $.each(data['result'], function(key, val) {
+                        var option = $('<option />');
                         option.attr('value', val).text(val);
                         option.attr('countryid', key);
                         if(presel)
@@ -248,14 +248,14 @@ function locationInfo() {
                                 option.attr('selected', 'selected');
                             }
                         }
-                        jQuery('.countries').append(option);
-                    });
+                        $('.countries').append(option).trigger('create');                            
+                    });                    
                 }
                 if(presel)
                 {
-                    jQuery('.countries').trigger('change');
+                    $('.countries').trigger('change');
                 }
-                jQuery(".countries").prop("disabled",false);
+                $(".countries").prop("disabled", false);                
             }
             else{
                 alert(data.msg);
@@ -265,33 +265,35 @@ function locationInfo() {
 
 }
 
-jQuery(function() {
+$(function() {
     var loc = new locationInfo();
     loc.getCountries();
-    jQuery(".countries").on("change", function(ev) {
-        var countryId = jQuery("option:selected", this).attr('countryid');
+
+    $(".countries").on("change", function(ev) {
+        var countryId = $("option:selected", this).attr('countryid');
         if(countryId != ''){
             loc.getStates(countryId);
         }
         else{
-            jQuery(".states option:gt(0)").remove();
+            $(".states option:gt(0)").remove();
         }
     });
-    jQuery(".states").on("change", function(ev) {
-        var stateId = jQuery("option:selected", this).attr('stateid');
+    $(".states").on("change", function(ev) {
+        var stateId = $("option:selected", this).attr('stateid');
         if(stateId != ''){
             loc.getCities(stateId);
         }
         else{
-            jQuery(".cities option:gt(0)").remove();
+            $(".cities option:gt(0)").remove();
         }
     });
 
-    jQuery(".cities").on("change", function(ev) {
-        var cityId = jQuery("option:selected", this).val();
+    $(".cities").on("change", function(ev) {
+        var cityId = $("option:selected", this).val();
         if(cityId != ''){
             loc.confCity(cityId);
         }
     });
+
 });
 
