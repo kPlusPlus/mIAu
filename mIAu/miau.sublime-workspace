@@ -1,0 +1,1091 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"font",
+				"font-size\tproperty"
+			],
+			[
+				"ba",
+				"background-image"
+			],
+			[
+				"bna",
+				"background-image\tproperty"
+			],
+			[
+				"background-c",
+				"background-color\tproperty"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"em",
+				"email"
+			],
+			[
+				"echo",
+				"echo\techo \"…\""
+			],
+			[
+				"e",
+				"exe"
+			],
+			[
+				"se",
+				"select"
+			],
+			[
+				"c",
+				"cities"
+			],
+			[
+				"count",
+				"country"
+			],
+			[
+				"coun",
+				"country"
+			],
+			[
+				"co",
+				"country"
+			],
+			[
+				"las",
+				"lastname"
+			],
+			[
+				"bo",
+				"bottom\tproperty"
+			],
+			[
+				"s",
+				"src\tAttr"
+			],
+			[
+				"error",
+				"error_reporting"
+			],
+			[
+				"req",
+				"req1\trequire_once …"
+			],
+			[
+				"ph",
+				"php"
+			],
+			[
+				"prezime",
+				"prezimeclan"
+			],
+			[
+				"file",
+				"file_path"
+			],
+			[
+				"select",
+				"SELECT"
+			],
+			[
+				"contro",
+				"controller"
+			],
+			[
+				"contr",
+				"controller"
+			],
+			[
+				"smt",
+				"smtplib"
+			],
+			[
+				"sm",
+				"smptserver"
+			],
+			[
+				"smtp",
+				"smptserver"
+			],
+			[
+				"start",
+				"startNo"
+			],
+			[
+				"pas",
+				"password"
+			],
+			[
+				"pa",
+				"password"
+			],
+			[
+				"try",
+				"try\tTry/Except"
+			],
+			[
+				"db",
+				"dbhandle"
+			],
+			[
+				"qu",
+				"query"
+			],
+			[
+				"NA",
+				"NAZIV"
+			],
+			[
+				"ART",
+				"ARTIKLI_GRUPE"
+			],
+			[
+				"spe",
+				"specNum"
+			],
+			[
+				"lo",
+				"loza"
+			],
+			[
+				"base",
+				"base64_decode"
+			],
+			[
+				"sat",
+				"sadPost"
+			],
+			[
+				"con",
+				"controllerName"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"form",
+				"form-control"
+			],
+			[
+				"form-",
+				"form-group"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"Ga",
+				"GameOver"
+			],
+			[
+				"info",
+				"info"
+			],
+			[
+				"cli",
+				"clickNo"
+			],
+			[
+				"cl",
+				"clickNo"
+			],
+			[
+				"Nu",
+				"NumGues"
+			],
+			[
+				"Num",
+				"NumGues"
+			],
+			[
+				"bu",
+				"button"
+			],
+			[
+				"but",
+				"buttons"
+			],
+			[
+				"tp",
+				"topMenu"
+			],
+			[
+				"cre",
+				"createTable"
+			],
+			[
+				"N",
+				"NumByRow"
+			],
+			[
+				"nu",
+				"NumAll"
+			],
+			[
+				"can",
+				"canvas"
+			],
+			[
+				"re",
+				"resizeGame"
+			],
+			[
+				"php",
+				"phpinfo"
+			],
+			[
+				"br",
+				"br\tTag"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"is_n",
+				"is_null"
+			],
+			[
+				"is",
+				"isset"
+			],
+			[
+				"els",
+				"else"
+			],
+			[
+				"el",
+				"else"
+			],
+			[
+				"opt",
+				"option\tTag"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"is_",
+				"is_array"
+			],
+			[
+				"do",
+				"doubleOIB"
+			],
+			[
+				"pri",
+				"print_r"
+			],
+			[
+				"dat",
+				"datum"
+			],
+			[
+				"sda",
+				"sdate"
+			],
+			[
+				"clan",
+				"clanduznos"
+			],
+			[
+				"duzno",
+				"duznostdo"
+			],
+			[
+				"gly",
+				"glyphicon-trash"
+			],
+			[
+				"st",
+				"style\tAttr"
+			],
+			[
+				"freem",
+				"freembo"
+			],
+			[
+				"post",
+				"POST"
+			],
+			[
+				"logf",
+				"logFileDirectory"
+			],
+			[
+				"upda",
+				"updateURL"
+			],
+			[
+				"g",
+				"game"
+			],
+			[
+				"get",
+				"getElementById\tmethod"
+			],
+			[
+				"clea",
+				"clearTimeout\tfunction"
+			],
+			[
+				"inn",
+				"innerHTML\tproperty"
+			],
+			[
+				"setI",
+				"setInterval\tfunction"
+			],
+			[
+				"html",
+				"html5\tSimple HTML5 Boilerplate"
+			],
+			[
+				"inp",
+				"inputt\tinput - text"
+			],
+			[
+				"scri",
+				"script\tTag"
+			],
+			[
+				"ht",
+				"html5\tSimple HTML5 Boilerplate"
+			],
+			[
+				"pero",
+				"person\tparameter"
+			],
+			[
+				"ret",
+				"return\tkeyword"
+			],
+			[
+				"Per",
+				"Person\tinterface"
+			],
+			[
+				"func",
+				"function\tkeyword"
+			],
+			[
+				"function",
+				"Function\tinterface"
+			],
+			[
+				"f",
+				"func"
+			],
+			[
+				"en",
+				"endl"
+			],
+			[
+				"b",
+				"blue"
+			],
+			[
+				"textar",
+				"textarea\tTag"
+			],
+			[
+				"arr",
+				"array"
+			],
+			[
+				"soc",
+				"socket_create"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"sh",
+				"shape1"
+			],
+			[
+				"im",
+				"image"
+			],
+			[
+				"Cu",
+				"Customer"
+			],
+			[
+				"Custr",
+				"CustomerController"
+			],
+			[
+				"O",
+				"Ord"
+			],
+			[
+				"cu",
+				"customer"
+			],
+			[
+				"customer",
+				"customer_id"
+			],
+			[
+				"W",
+				"where"
+			],
+			[
+				"Or",
+				"Order"
+			],
+			[
+				"o",
+				"order"
+			],
+			[
+				"ord",
+				"orders"
+			],
+			[
+				"fun",
+				"function"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/VBScript/VBScript.sublime-build",
+					""
+				],
+				[
+					"Packages/VBScript/VBScript.sublime-build",
+					"Run with WScript"
+				],
+				[
+					"Packages/VBScript/VBScript.sublime-build",
+					"Debug with CScript"
+				]
+			],
+			[
+				"Packages/VBScript/VBScript.sublime-build",
+				"Run with WScript"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"enable",
+				"phpfmt: enable/disable additional transformations"
+			],
+			[
+				"phpf",
+				"phpfmt: format now"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"packa",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"open",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"htmlprettify",
+				"HTMLPrettify: Set Plugin Options"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"update",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"codef",
+				"CodeFormatter: Format Code"
+			],
+			[
+				"codeformatter",
+				"CodeFormatter: Format Code"
+			],
+			[
+				"Package Control: Install Package",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: List Packages"
+			],
+			[
+				"",
+				"CodeFormatter: Format as PHP Syntax"
+			],
+			[
+				"file in",
+				"File: New View into File"
+			],
+			[
+				"lin",
+				"Preferences: Package Control Settings – Default"
+			],
+			[
+				"P",
+				"Package Control: Install Package"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"b",
+				"Build With: C++ Single File - Run"
+			],
+			[
+				"PackageResourceViewer",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"package reso",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"Snippet: ",
+				"Snippet: main()"
+			],
+			[
+				"pacl",
+				"Package Control: List Packages"
+			],
+			[
+				"reinde",
+				"Indentation: Reindent Lines"
+			]
+		],
+		"width": 412.0
+	},
+	"console":
+	{
+		"height": 176.0,
+		"history":
+		[
+			"clear",
+			"cls",
+			"gcc",
+			"help",
+			"list",
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/P/Cordova/mIAu/mIAu"
+	],
+	"file_history":
+	[
+		"/K/OneDrive/Steamer.txt",
+		"/P/Cordova/mIAu/mIAu/www/scripts/country.js",
+		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/tmp/countrylist.php",
+		"/P/Ionic/kemija/src/app/login/login.page.ts",
+		"/P/Ionic/kemija/src/app/home/home.page.html",
+		"/P/Ionic/kemija/platforms/android/app/src/main/AndroidManifest.xml",
+		"/P/Ionic/FB APP ID.txt",
+		"/P/Ionic/kemija/src/app/login/login.page.html",
+		"/P/Ionic/kemija/ToDo.txt",
+		"/P/Ionic/kemija/src/theme/variables.scss",
+		"/C/Users/kresimir/AppData/Local/Temp/_tc/mIAu/UpgradeLog2.htm",
+		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/tmp/facebook.html",
+		"/P/Ionic/kemija/pok.bat",
+		"/P/facebook.html",
+		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/tmp/address.html",
+		"/P/Ionic/todo.txt",
+		"/P/AndroidSDK/Sdk/tools/bin/sdkmanager.bat",
+		"/K/hitler/Hitler kaput.srt",
+		"/P/Ionic/kemijaa/config.xml",
+		"/P/Ionic/kemija/ionic.config.json",
+		"/P/Ionic/kemija/platforms/android/app/src/main/res/values/strings.xml",
+		"/P/Ionic/kemija/node_modules/cordova-android/RELEASENOTES.md",
+		"/P/Ionic/kemija/node_modules/@ionic-native/facebook/README.md",
+		"/P/Ionic/kemija/config.xml",
+		"/P/Ionic/kemija/src/app/contact/contact.page.ts",
+		"/P/Ionic/kemija/src/app/app.module.ts",
+		"/P/Ionic/kemija/src/app/member/member.page.html",
+		"/P/Ionic/kemija/src/app/newmember/newmember.page.html",
+		"/P/Ionic/kemija/src/environments/environment.ts",
+		"/P/Ionic/kemija/src/app/app.component.html",
+		"/P/Ionic/kemija/www/index.html",
+		"/P/Ionic/kemija/platforms/android/app/build/outputs/apk/release/output.json",
+		"/P/Ionic/kemija/make.bat",
+		"/P/Ionic/kemija/package-lock.json",
+		"/P/Ionic/kemija/src/app/login/login.module.ts",
+		"/P/Ionic/kemija/src/app/app.component.ts",
+		"/P/Ionic/kemija/src/app/home/home.page.ts",
+		"/C/Users/kresimir/AppData/Local/Microsoft/Windows/SettingSync/metastore/edb.log",
+		"/C/Users/kresimir/AppData/Local/Google/Chrome/User Data/ChromeDefaultData/Local Storage/leveldb/000008.log",
+		"/C/Users/kresimir/AppData/Local/Composer/repo/https---packagist.org/p-provider-latest.json",
+		"/P/Ionic/kemija/src/app/home/home.module.ts",
+		"/E/Program Files (x86)/Sublime_Text/Data/Packages/TypeScript/TypeScript.sublime-settings",
+		"/P/Ionic/kemija/src/app/app-routing.module.ts",
+		"/P/Ionic/kemija/src/app/about/about.page.ts",
+		"/P/Ionic/kemija/src/app/about/about.page.html",
+		"/P/Ionic/start/platforms/android/app/build/outputs/apk/release/output.json",
+		"/P/Ionic/start/www/build/main.js",
+		"/P/Ionic/start/www/index.html",
+		"/C/Users/kresimir/AppData/Roaming/Dev-Cpp/devcpp.ini",
+		"/C/Users/kresimir/AppData/Roaming/npm-cache/_logs/2019-04-20T02_14_55_664Z-debug.log",
+		"/P/Ionic/MyIonicProject/ionic.config.json",
+		"/P/Ionic/MyIonicProject/www/index.html",
+		"/C/Users/kresimir/AppData/Roaming/npm-cache/anonymous-cli-metrics.json",
+		"/C/Users/kresimir/AppData/Roaming/npm-cache/_logs/2019-04-20T01_58_29_079Z-debug.log",
+		"/P/Ionic/restrr/package-lock.json",
+		"/P/Ionic/kemijaaa/www/index.html",
+		"/P/Ionic/restrr/package.json",
+		"/P/Ionic/helloWorld/www/index.html",
+		"/P/Ionic/kemija/src/index.html",
+		"/P/Ionic/helloWorld/package.json",
+		"/P/Ionic/ang/test_a.html",
+		"/P/Ionic/kemijaaa/www/143.js",
+		"/P/Ionic/kemija/src/app/home/home.page.scss",
+		"/P/Ionic/kemija/src/main.ts",
+		"/P/Ionic/kemija_old2/www/index.html",
+		"/P/Ionic/kemija/e2e/src/app.e2e-spec.ts",
+		"/P/Ionic/kemija/node_modules/.bin/errno.cmd",
+		"/P/Ionic/kemija/node_modules/.bin/acorn.cmd",
+		"/P/Ionic/myApp/src/test.ts",
+		"/P/Ionic/myApp/src/main.ts",
+		"/P/Ionic/MyIonicProject/src/app/main.ts",
+		"/P/Ionic/MyIonicProject/src/index.html",
+		"/P/Ionic/MyIonicProject/www/build/main.css",
+		"/P/Ionic/MyIonicProject/www/build/main.js.map",
+		"/P/Ionic/MyIonicProject/www/build/main.js",
+		"/P/Ionic/test/ionic-tutorial/server/server.js",
+		"/P/Ionic/test_a.html",
+		"/C/Users/kresimir/AppData/Local/Temp/_tcx/1/0/tmp/testA.html",
+		"/P/Cordova/mIAu/mIAu/www/index.html",
+		"/P/Cordova/mIAu/mIAu/www/index - Copy.html",
+		"/C/Users/kresimir/AppData/Local/Temp/_tcx/1/0/tmp/countrystatecity.js",
+		"/P/Ionic/jquery.html",
+		"/K/OneDrive/MojDocument/pjesme/Hvala na Milosti i bezuvjetnoj ljubavi što nam je.txt",
+		"/C/Users/kresimir/AppData/Local/Temp/_tcx/1/0/tmp/citieslist.php",
+		"/C/Users/kresimir/AppData/Local/Temp/_tcx/1/0/tmp/test.html",
+		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/tmp/test.html",
+		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/tmp/countrystatecity.js",
+		"/P/test.html",
+		"/C/totalcmd/wcx_ftp.ini",
+		"/P/temp/restapi.json",
+		"/P/temp/game.sql",
+		"/K/ANATRON/kolomejec/dovrsiti_za_site.txt",
+		"/C/Users/kresimir/AppData/Local/Temp/user.php",
+		"/P/temp/HR.txt",
+		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/tmp/php.ini",
+		"/P/Cordova/cordova-bootstrap-master/package-lock.json",
+		"/P/temp/dump_kapluspl_miau.sql",
+		"/P/Cordova/mIAu/mIAu/www/rules.html",
+		"/P/Cordova/cities/export.csv",
+		"/P/Cordova/cities/worldcitiespop.csv",
+		"/P/Cordova/cities/readme.txt",
+		"/C/Users/kresimir/Desktop/diners.txt",
+		"/P/temp/readme.txt",
+		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/tmp/game.php",
+		"/P/Cordova/cities/US.txt",
+		"/I/Python/wordlist.lst",
+		"/P/temp/CA.txt",
+		"/C/Users/kresimir/AppData/Local/Temp/_tc/HM.txt",
+		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/tmp/memby.php",
+		"/P/temp/CR.txt",
+		"/P/Cordova/documents/moj_kalk.txt",
+		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/mIAu/bingmap.html",
+		"/P/bingmap.html",
+		"/P/Cordova/MyApp/platforms/android/app/src/main/AndroidManifest.xml",
+		"/P/Cordova/MyApp/www/js/index.js",
+		"/P/Cordova/MyApp/www/index.html",
+		"/P/Cordova/mIAu/mIAu/bin/Windows-x86/Debug/AppxManifest.xml",
+		"/P/Cordova/documents/skinuo.txt",
+		"/P/Cordova/mIAu/mIAu/platforms/android/AndroidManifest.xml",
+		"/P/Cordova/mIAu/mIAu/platforms/android/res/xml/config.xml",
+		"/P/Cordova/mIAu/mIAu/www/scripts/rules.js",
+		"/P/Cordova/mIAu/mIAu/package.json",
+		"/K/00_snimi_prog/CorelDRAW Graphics Suite 2018 v20.0.0.633 Retail (x86-x64) Ml/serial.txt",
+		"/K/temp/CorelDRAW Graphics Suite X7.txt",
+		"/K/temp/Corel_Reg.txt",
+		"/K/simplephp/test1.php",
+		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/tmp/citieslist.php",
+		"/K/ANATRON/kolomejec/redirect.html"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 262.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"AndroidMainifest.xml",
+			"config.xml",
+			"}\n",
+			"done",
+			"SPORT",
+			"$memby",
+			"ownerEmail:'#'",
+			"hr",
+			"ownerEmail",
+			"form1",
+			"newsletter",
+			"email",
+			"form1",
+			">\n",
+			"Zagreb",
+			"______________________________________________________________",
+			"$cities",
+			".map",
+			"min.map",
+			"map",
+			"min.map",
+			"3187002",
+			"url",
+			"root",
+			"flag-icon",
+			"submit",
+			"lang",
+			"%;\">",
+			"\"HR",
+			"HR",
+			"kapluspl",
+			"select *",
+			"MONTH( datumUpisa ) = 11",
+			"MONTH( datumUpisa ) = 1",
+			"ð",
+			"È",
+			"è",
+			"æ",
+			"Æ",
+			"game",
+			"vClan",
+			"iAmmoCapacityIncrease",
+			"=13",
+			"MaxAmmoCount",
+			"MOHAGameNonNative",
+			"AmmoCount",
+			"2000",
+			"æ",
+			"è",
+			"EMAIL",
+			"enter",
+			"70",
+			"ð",
+			"Æ",
+			"è",
+			".png",
+			"fire",
+			"fir",
+			"firefox",
+			"TESTLA",
+			"sublime_text.exe",
+			"CrcMrc.exe",
+			"print '",
+			"8084",
+			"System.Data.SqlClient",
+			"'@'%';",
+			"mysql_admin",
+			"\n-----------------",
+			"-----------------",
+			"1051392",
+			"sublime_text.exe",
+			"333658@",
+			"268132@",
+			"sublime_text.exe",
+			"268132@",
+			"crc",
+			"kapluspl_admin",
+			"<ProcID>1<",
+			"<ProcID>1",
+			"<ProcID>1<",
+			"24/24",
+			"smtp",
+			"admin@kaplusplus",
+			"admin@kaplusplus.com",
+			"admin@kaplusplus.com ",
+			"1717",
+			"artikli_grupe",
+			"_SESSION[\"jezik\"]",
+			"artikli.php",
+			"artikli.php?",
+			"jez",
+			"?jez",
+			"FROM ARTIKLI_GRUPE",
+			"sl",
+			"artikli_g",
+			"artikli_grupe",
+			"artikli_gr8upe",
+			"<",
+			"jezik",
+			"_grupe",
+			"cpanel.php",
+			"ses_jezik",
+			"close",
+			"openModalM",
+			"currentSlide",
+			"openModal",
+			"dots[slideIndex-1]",
+			"dots[slideIndex-1].class",
+			"dots[slideIndex-1].className +=",
+			"dots[slideIndex-1].className += \" active\"",
+			".visible-xs",
+			"desktop",
+			"768",
+			"min-width: 768px",
+			"768",
+			"min-width:",
+			"min-width: 768px",
+			"navbar-default",
+			"navbar-default\"",
+			"appendTo",
+			"max-width:",
+			"grupe",
+			"1a8b49",
+			"nav",
+			"obrisi",
+			"$tb",
+			"name=\"jezik\"",
+			"obrisi"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"$game",
+			"$countries",
+			"select count(*)",
+			"MONTH( datumUpisa ) = 12",
+			"MONTH( datumUpisa ) = 2",
+			"đ",
+			"Č",
+			"č",
+			"ć",
+			"Ć",
+			"ć",
+			"č",
+			"73",
+			"đ",
+			"Ć",
+			"č",
+			"TESLA",
+			"TESTLA",
+			"print ('",
+			"min-width: 1200px",
+			"č",
+			"ć",
+			"iAmmoCapacityIncrease=100",
+			"č",
+			"ć",
+			"",
+			"\\n",
+			"_N_"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 90.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 126.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 325.0
+	},
+	"pinned_build_system": "Packages/Python 3/Python3.sublime-build",
+	"project": "miau.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"kb",
+				"kBooble.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "refo",
+		"selected_items":
+		[
+			[
+				"refo",
+				"reformat"
+			],
+			[
+				"indent",
+				"indent"
+			]
+		],
+		"width": 984.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 295.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

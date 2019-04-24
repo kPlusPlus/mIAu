@@ -1,0 +1,2 @@
+﻿
+geodata.solutions/api/api.php?type=getCountries

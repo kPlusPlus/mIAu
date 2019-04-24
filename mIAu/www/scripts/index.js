@@ -58,18 +58,44 @@ function TakeAll() {
     });
 }
 
+/*
 function TakeCountry() {    
     $.ajax({
         url: 'http://159.69.113.252/~kapluspl/tmp/countrylist.php',
         cache: false,
         success: function (data) {
-            $("#divcountry").html(data).trigger('create');;
+            $("#divcountry").html(data).trigger('create');
         },
         fail: function (data) {
             alert('Err 4. Country list problem');
         }
     });
 }
+*/
+
+// ToDo: new function
+function TakeCountry() {
+    var rootUrl = "//geodata.solutions/api/api.php?type=getCountries";
+
+    $.getJSON(rootUrl, function (data) {
+
+        if (data.tp == 1) {
+            var listlen = Object.keys(data['result']).length;
+
+            if (listlen > 0) {
+                $.each(data['result'], function (key, val) {
+                    var option = $('<option />');
+                    option.attr('value', val).text(val);
+                    $('#countryId').append(option);
+                });
+            }
+        }       
+
+    });
+
+
+}
+
 
 $(document).ajaxStart(function () {
     $("#waitcity").css("display", "block");

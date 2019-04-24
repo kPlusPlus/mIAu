@@ -248,7 +248,7 @@ function locationInfo() {
                                 option.attr('selected', 'selected');
                             }
                         }
-                        $('.countries').append(option).trigger('create');                            
+                        $('.countries').append(option).trigger('create');
                     });                    
                 }
                 if(presel)
