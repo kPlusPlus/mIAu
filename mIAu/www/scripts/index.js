@@ -358,8 +358,34 @@ function GetMap() {
 
         //Center the map on the user's location.
         map.setView({ center: loc, zoom: 15 });
-    });
-    
+    });   
+
+}
+
+
+function ajaxCall() {
+    this.send = function (data, url, method, success, type) {
+        type = type || 'json';
+        var successRes = function (data) {
+            success(data);
+        }
+
+        var errorRes = function (e) {
+            console.log(e);
+            //alert("Error found \nError Code: "+e.status+" \nError Message: "+e.statusText);
+            //$('#loader').modal('hide');
+        }
+        $.ajax({
+            url: url,
+            type: method,
+            data: data,
+            success: successRes,
+            error: errorRes,
+            dataType: type,
+            timeout: 60000
+        });
+
+    }
 
 }
 
