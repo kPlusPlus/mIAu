@@ -1,2 +1,10 @@
 ﻿
 *** makni glupi span kada se napune state
+
+makni 
+<span class="states">
+
+
+
+$('span.states').remove();
+$('span.cities').remove();
