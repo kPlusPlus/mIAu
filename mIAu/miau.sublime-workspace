@@ -459,6 +459,41 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "www/scripts/countrystatecity.js",
+			"settings":
+			{
+				"buffer_size": 10072,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/scripts/index.js",
+			"settings":
+			{
+				"buffer_size": 7994,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "www/scripts/country.js",
+			"settings":
+			{
+				"buffer_size": 659,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "www/scripts/country - Copy.js",
+			"settings":
+			{
+				"buffer_size": 699,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -654,10 +689,13 @@
 	},
 	"expanded_folders":
 	[
-		"/P/Cordova/mIAu/mIAu"
+		"/P/Cordova/mIAu/mIAu",
+		"/P/Cordova/mIAu/mIAu/www",
+		"/P/Cordova/mIAu/mIAu/www/scripts"
 	],
 	"file_history":
 	[
+		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/tmp/testA.html",
 		"/K/OneDrive/Steamer.txt",
 		"/P/Cordova/mIAu/mIAu/www/scripts/country.js",
 		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/tmp/countrylist.php",
@@ -784,8 +822,7 @@
 		"/K/temp/CorelDRAW Graphics Suite X7.txt",
 		"/K/temp/Corel_Reg.txt",
 		"/K/simplephp/test1.php",
-		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/tmp/citieslist.php",
-		"/K/ANATRON/kolomejec/redirect.html"
+		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/tmp/citieslist.php"
 	],
 	"find":
 	{
@@ -804,6 +841,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"getStates",
 			"AndroidMainifest.xml",
 			"config.xml",
 			"}\n",
@@ -930,8 +968,7 @@
 			"nav",
 			"obrisi",
 			"$tb",
-			"name=\"jezik\"",
-			"obrisi"
+			"name=\"jezik\""
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -977,8 +1014,145 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "www/scripts/countrystatecity.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10072,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4046,
+								4057
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2502.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "www/scripts/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7994,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2126,
+								2126
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2097.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "www/scripts/country.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 659,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								346,
+								346
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "www/scripts/country - Copy.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 699,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								614,
+								614
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
 			]
 		}
 	],
