@@ -1,2 +1,2 @@
 ﻿
-geodata.solutions/api/api.php?type=getCountries
+*** makni glupi span kada se napune state
