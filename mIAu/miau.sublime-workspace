@@ -463,9 +463,9 @@
 			"file": "www/scripts/index.js",
 			"settings":
 			{
-				"buffer_size": 8252,
+				"buffer_size": 11544,
 				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -663,11 +663,21 @@
 	},
 	"expanded_folders":
 	[
-		"/P/Cordova/mIAu/mIAu"
+		"/P/Cordova/mIAu/mIAu",
+		"/P/Cordova/mIAu/mIAu/www",
+		"/P/Cordova/mIAu/mIAu/www/scripts"
 	],
 	"file_history":
 	[
+		"/P/Cordova/mIAu/mIAu/www/index.html",
 		"/K/OneDrive/Steamer.txt",
+		"/C/Users/kresimir/Desktop/NAPRAVI.txt",
+		"/K/00moj/dokumenti/oib.txt",
+		"/P/AndroidSDK/Sdk/tools/package.xml",
+		"/P/Cordova/mIAu/mIAu/ToDo.txt",
+		"/C/Users/kresimir/AppData/Local/Temp/_tc/readme.txt",
+		"/P/Cordova/AL.txt",
+		"/C/Users/kresimir/AppData/Local/Temp/_tc/AL.txt",
 		"/P/Cordova/mIAu/mIAu/www/scripts/countrystatecity.js",
 		"/P/Cordova/mIAu/mIAu/www/scripts/country - Copy.js",
 		"/P/Cordova/mIAu/mIAu/www/scripts/country.js",
@@ -748,7 +758,6 @@
 		"/P/Ionic/test/ionic-tutorial/server/server.js",
 		"/P/Ionic/test_a.html",
 		"/C/Users/kresimir/AppData/Local/Temp/_tcx/1/0/tmp/testA.html",
-		"/P/Cordova/mIAu/mIAu/www/index.html",
 		"/P/Cordova/mIAu/mIAu/www/index - Copy.html",
 		"/C/Users/kresimir/AppData/Local/Temp/_tcx/1/0/tmp/countrystatecity.js",
 		"/P/Ionic/jquery.html",
@@ -787,14 +796,7 @@
 		"/P/Cordova/MyApp/www/js/index.js",
 		"/P/Cordova/MyApp/www/index.html",
 		"/P/Cordova/mIAu/mIAu/bin/Windows-x86/Debug/AppxManifest.xml",
-		"/P/Cordova/documents/skinuo.txt",
-		"/P/Cordova/mIAu/mIAu/platforms/android/AndroidManifest.xml",
-		"/P/Cordova/mIAu/mIAu/platforms/android/res/xml/config.xml",
-		"/P/Cordova/mIAu/mIAu/www/scripts/rules.js",
-		"/P/Cordova/mIAu/mIAu/package.json",
-		"/K/00_snimi_prog/CorelDRAW Graphics Suite 2018 v20.0.0.633 Retail (x86-x64) Ml/serial.txt",
-		"/K/temp/CorelDRAW Graphics Suite X7.txt",
-		"/K/temp/Corel_Reg.txt"
+		"/P/Cordova/documents/skinuo.txt"
 	],
 	"find":
 	{
@@ -995,15 +997,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8252,
+						"buffer_size": 11544,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2430,
-								2430
+								1687,
+								1687
 							]
 						],
 						"settings":
@@ -1014,7 +1016,7 @@
 							"use_tab_stops": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3300.0,
+						"translation.y": 1200.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1124,7 +1126,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 295.0,
+	"side_bar_width": 50.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

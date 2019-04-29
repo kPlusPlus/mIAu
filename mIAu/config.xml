@@ -100,4 +100,5 @@
   <plugin name="cordova-plugin-device-orientation" spec="~2.0.1" />
   <plugin name="cordova-plugin-geolocation" spec="~2.4.3" />
   <preference name="Fullscreen" value="True" />
+  <access origin="http://geodata.solutions" />
 </widget>

@@ -1,10 +1,10 @@
-﻿function onLoad() {    
-    map = new Microsoft.Maps.Map(document.getElementById('divmapa'), {});    
+﻿function onLoad() {
+    map = new Microsoft.Maps.Map(document.getElementById('divmapa'), {});
 }
 
 $(document).on("tap", "#btnCountry", function () {
     TakeCountry();
-    return false;    
+    return false;
 });
 
 
@@ -13,7 +13,7 @@ $("#btnTest").tap(function () {
     //TakeAll();
 })
 
-$(document).on("change", "#selcountry", function () {    
+$(document).on("change", "#selcountry", function () {
     var codecountry;
     codecountry = $("#selcountry").select().val();
     if (codecountry.length > 1)
@@ -33,7 +33,7 @@ $(document).on('change', "#selcity", function () {
 $("#btnsub").tap(function () {
     $.ajax({
         url: 'http://159.69.113.252/~kapluspl/tmp/memby.php',
-        data: $("#forma").serialize(),        
+        data: $("#forma").serialize(),
         cache: false,
         type: "POST",
         success: function (data) {
@@ -58,30 +58,50 @@ function TakeAll() {
     });
 }
 
-/*
-function TakeCountry() {    
+
+function TakeCountry() {
+    var stype = 'getCountries';
     $.ajax({
-        url: 'http://159.69.113.252/~kapluspl/tmp/countrylist.php',
+        url: 'https://geodata.solutions/api/api.php?type=getCountries',        
+        method: 'POST',
+        dataType: 'json',
         cache: false,
         success: function (data) {
-            $("#divcountry").html(data).trigger('create');
+
+            if (data.tp == 1) {
+                var listlen = Object.keys(data['result']).length;
+                if (listlen > 0) {
+                    $.each(data['result'], function (key, val) {
+                        var option = $('<option />');
+                        option.attr('value', val).text(val);
+                        option.attr('countryid', key);
+                        $('#countryId').append(option);
+                    });
+                }
+            }
+
         },
         fail: function (data) {
             alert('Err 4. Country list problem');
         }
     });
 }
-*/
+
 
 // ToDo: new function
+/*
 function TakeCountry() {
     var rootUrl = "//geodata.solutions/api/api.php?type=getCountries";
+    var call = new ajaxCall();    
+    var url = rootUrl;
+    var method = "post";
+    var data = {};
 
-    $.getJSON(rootUrl, function (data) {
-
+    //$.getJSON(rootUrl, function (data) {
+    call.send(data, url, method, function (data) {
+        alert(data);
         if (data.tp == 1) {
             var listlen = Object.keys(data['result']).length;
-
             if (listlen > 0) {
                 $.each(data['result'], function (key, val) {
                     var option = $('<option />');
@@ -94,10 +114,10 @@ function TakeCountry() {
 
     });
 }
-
+*/
 
 $("#countryId").change(function () {
-    var selCountry = $("option:selected", $("#countryId")).attr('countryid');    
+    var selCountry = $("option:selected", $("#countryId")).attr('countryid');
     getStates(selCountry);
 });
 
@@ -107,8 +127,7 @@ $('#stateId').change(function () {
 });
 
 
-function getStates(id) 
-{
+function getStates(id) {
     $(".states option:gt(0)").remove();
     $(".cities option:gt(0)").remove();
     //get additional fields
@@ -131,17 +150,17 @@ function getStates(id)
     $.getJSON(url, function (data) {
         //$('.states').find("option:eq(0)").html("Select State");
         if (data.tp == 1) {
-            if (data.hits > 1000) {                
+            if (data.hits > 1000) {
                 console.log('Daily geodata.solutions request limit exceeded:' + data.hits + ' of 1000');
             }
             else {
                 console.log('Daily geodata.solutions request count:' + data.hits + ' of 1000')
-            }            
+            }
             //var options = [];
             $.each(data['result'], function (key, val) {
                 var option = $('<option />');
                 option.attr('value', val).text(val);
-                option.attr('stateid', key);                
+                option.attr('stateid', key);
                 $('.states').append(option).trigger('create');
                 //options.push(option);
             });
@@ -156,7 +175,7 @@ function getStates(id)
             alert(data.msg);
         }
     });
-    
+
 };
 
 
@@ -205,7 +224,7 @@ function getCities(id) {
                 var option = $('<option />');
                 option.attr('value', usestate).text(usestate);
                 option.attr('selected', 'selected');
-                $('.cities').append(option);                
+                $('.cities').append(option);
             }
             $('span.cities').remove();
             $(".cities").prop("disabled", false);
@@ -223,22 +242,19 @@ $(document).ajaxComplete(function () {
     $("#waitcity").css("display", "none");
 });
 
-function TakeCity(codecountry) 
-{
+function TakeCity(codecountry) {
     $.ajax({
         url: 'http://159.69.113.252/~kapluspl/tmp/citieslist.php',
-            data: { "country": codecountry },              // $('#formA').serialize(),
-            type: "POST",
-            success: function (data) 
-            {
-                $("#divcity").html(data).trigger('create');
-            },
-            fail: function (data) 
-            {
-                alert('Err 6. Internet connection problem');
-            }
+        data: { "country": codecountry },              // $('#formA').serialize(),
+        type: "POST",
+        success: function (data) {
+            $("#divcity").html(data).trigger('create');
+        },
+        fail: function (data) {
+            alert('Err 6. Internet connection problem');
         }
-        );
+    }
+    );
 }
 
 
@@ -250,12 +266,12 @@ $("#btntest").tap(function () {
             //alert(data);
             $("#body").html(data).trigger('create');
         }
-    });    
+    });
 });
 
-$("#btnpublic").tap(function () {    
-    HideAll();    
-    ShowPage(2);    
+$("#btnpublic").tap(function () {
+    HideAll();
+    ShowPage(2);
 });
 
 $("#btnhome").tap(function () {
@@ -269,13 +285,13 @@ function HideAll() {
     $("#body2").hide();
 }
 
-function ShowPage(pageno) {    
+function ShowPage(pageno) {
     var pagename = "#body" + pageno;
     $(pagename).show("slow");
 }
 
 $("#getPosition").tap(function () {
-    getPosition();   
+    getPosition();
 });
 
 $("#watchPosition").tap(function () {
@@ -358,7 +374,7 @@ function GetMap() {
 
         //Center the map on the user's location.
         map.setView({ center: loc, zoom: 15 });
-    });   
+    });
 
 }
 
@@ -377,6 +393,7 @@ function ajaxCall() {
         }
         $.ajax({
             url: url,
+            //cache: false,
             type: method,
             data: data,
             success: successRes,
