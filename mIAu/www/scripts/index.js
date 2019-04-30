@@ -1,5 +1,12 @@
 ﻿function onLoad() {
     map = new Microsoft.Maps.Map(document.getElementById('divmapa'), {});
+
+    $("#countryId").change(function () {
+
+        var selCountry = $("option:selected", $("#countryId")).attr('countryid');
+        getStates(selCountry);
+
+    });
 }
 
 $(document).on("tap", "#btnCountry", function () {
@@ -116,6 +123,8 @@ function TakeCountry() {
 }
 */
 
+/*
+
 $("#countryId").change(function () {
     var selCountry = $("option:selected", $("#countryId")).attr('countryid');
     getStates(selCountry);
@@ -125,6 +134,12 @@ $('#stateId').change(function () {
     var selState = $("option:selected", $("#stateId")).attr('stateid');;
     getCities(selState);
 });
+
+$(document).on('change', '#stateId', function () {
+    alert("Changed!");
+});
+
+*/
 
 
 function getStates(id) {
@@ -142,39 +157,47 @@ function getStates(id) {
         addClasses = '&addClasses=' + encodeURIComponent(acC);
     }
     var rootUrl = "//geodata.solutions/api/api.php";
-    var url = rootUrl + '?type=getStates&countryId=' + id + addParams + addClasses;
+    var urlspecial = rootUrl + '?type=getStates&countryId=' + id + addParams + addClasses;
     var method = "post";
     var data = {};
     $('.states').find("option:eq(0)").html("Please wait..");
     //call.send(data, url, method, function (data) {
-    $.getJSON(url, function (data) {
-        //$('.states').find("option:eq(0)").html("Select State");
-        if (data.tp == 1) {
-            if (data.hits > 1000) {
-                console.log('Daily geodata.solutions request limit exceeded:' + data.hits + ' of 1000');
+
+    // OVO SE MORA PREPISATI
+    //$.getJSON(url, function (data) {
+    $.ajax({
+        url: urlspecial,
+        method: 'POST',
+        dataType: 'json',
+        success: function (data) {
+            //$('.states').find("option:eq(0)").html("Select State");
+            if (data.tp == 1) {
+                if (data.hits > 1000) {
+                    console.log('Daily geodata.solutions request limit exceeded:' + data.hits + ' of 1000');
+                }
+                else {
+                    console.log('Daily geodata.solutions request count:' + data.hits + ' of 1000')
+                }
+                //var options = [];
+                $.each(data['result'], function (key, val) {
+                    var option = $('<option />');
+                    option.attr('value', val).text(val);
+                    option.attr('stateid', key);
+                    $('.states').append(option).trigger('create');
+                    //options.push(option);
+                });
+                //$('.states').append(options).trigger('create');                
+                $(".states").prop("disabled", false);
+                //$('#stateId').slideUp();
+                //$(".states").click();
+                $('.states').find("option:eq(0)").html("Select state");
+                $('span.states').remove();
             }
             else {
-                console.log('Daily geodata.solutions request count:' + data.hits + ' of 1000')
+                alert(data.msg);
             }
-            //var options = [];
-            $.each(data['result'], function (key, val) {
-                var option = $('<option />');
-                option.attr('value', val).text(val);
-                option.attr('stateid', key);
-                $('.states').append(option).trigger('create');
-                //options.push(option);
-            });
-            //$('.states').append(options).trigger('create');                
-            $(".states").prop("disabled", false);
-            //$('#stateId').slideUp();
-            //$(".states").click();
-            $('.states').find("option:eq(0)").html("Select state");
-            $('span.states').remove();
         }
-        else {
-            alert(data.msg);
-        }
-    });
+    }); // završi
 
 };
 
@@ -193,44 +216,55 @@ function getCities(id) {
     }
     var addParams = '';
     var rootUrl = "//geodata.solutions/api/api.php";
-    var url = rootUrl + '?type=getCities&countryId=' + $('#countryId option:selected').attr('countryid') + '&stateId=' + id + addParams + addClasses;
+    var urlspacial = rootUrl + '?type=getCities&countryId=' + $('#countryId option:selected').attr('countryid') + '&stateId=' + id + addParams + addClasses;
     var method = "post";
     var data = {};
     $('.cities').find("option:eq(0)").html("Please wait..");
     //call.send(data, url, method, function (data) {
-    $.getJSON(url, function (data) {
-        $('.cities').find("option:eq(0)").html("Select City");
-        if (data.tp == 1) {
-            if (data.hits > 1000) {
-                //alert('Free usage far exceeded. Please subscribe at geodata.solutions.');
-                console.log('Daily geodata.solutions request limit exceeded count:' + data.hits + ' of 1000');
-            }
-            else {
-                console.log('Daily geodata.solutions request count:' + data.hits + ' of 1000')
-            }
+    //$.getJSON(url, function (data) { // promjena
+    $.ajax ({
+        url: urlspacial,
+        method: 'POST',
+        dataType: 'json',
+        cache: false,
+        success: function (data) {
 
-            var listlen = Object.keys(data['result']).length;
+            $('.cities').find("option:eq(0)").html("Select City");
+            if (data.tp == 1) {
+                if (data.hits > 1000) {
+                    //alert('Free usage far exceeded. Please subscribe at geodata.solutions.');
+                    console.log('Daily geodata.solutions request limit exceeded count:' + data.hits + ' of 1000');
+                }
+                else {
+                    console.log('Daily geodata.solutions request count:' + data.hits + ' of 1000')
+                }
 
-            if (listlen > 0) {
-                $.each(data['result'], function (key, val) {
+                var listlen = Object.keys(data['result']).length;
 
+                if (listlen > 0) {
+                    $.each(data['result'], function (key, val) {
+
+                        var option = $('<option />');
+                        option.attr('value', val).text(val);
+                        $('.cities').append(option);
+                    });
+                }
+                else {
+                    var usestate = $('#stateId option:selected').val();
                     var option = $('<option />');
-                    option.attr('value', val).text(val);
+                    option.attr('value', usestate).text(usestate);
+                    option.attr('selected', 'selected');
                     $('.cities').append(option);
-                });
+                }
+                $('span.cities').remove();
+                $(".cities").prop("disabled", false);
             }
             else {
-                var usestate = $('#stateId option:selected').val();
-                var option = $('<option />');
-                option.attr('value', usestate).text(usestate);
-                option.attr('selected', 'selected');
-                $('.cities').append(option);
+                alert(data.msg);
             }
-            $('span.cities').remove();
-            $(".cities").prop("disabled", false);
-        }
-        else {
-            alert(data.msg);
+        },
+        error: function (data) {
+            alert("error 18 " + data);
         }
     });
 };

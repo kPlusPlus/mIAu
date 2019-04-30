@@ -463,9 +463,18 @@
 			"file": "www/scripts/index.js",
 			"settings":
 			{
-				"buffer_size": 11544,
+				"buffer_size": 12114,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/K/OneDrive/Steamer.txt",
+			"settings":
+			{
+				"buffer_size": 2421,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -988,7 +997,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -997,15 +1006,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11544,
+						"buffer_size": 12114,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1687,
-								1687
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1017,6 +1026,34 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 1200.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/K/OneDrive/Steamer.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2421,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								202,
+								189
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
