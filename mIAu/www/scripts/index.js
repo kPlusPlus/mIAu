@@ -156,10 +156,10 @@ function getStates(id) {
         acC = cC.join();
         addClasses = '&addClasses=' + encodeURIComponent(acC);
     }
-    var rootUrl = "//geodata.solutions/api/api.php";
+    var rootUrl = "https://geodata.solutions/api/api.php";
     var urlspecial = rootUrl + '?type=getStates&countryId=' + id + addParams + addClasses;
     var method = "post";
-    var data = {};
+    //var data = {};
     $('.states').find("option:eq(0)").html("Please wait..");
     //call.send(data, url, method, function (data) {
 
@@ -169,6 +169,7 @@ function getStates(id) {
         url: urlspecial,
         method: 'POST',
         dataType: 'json',
+        cache: false,
         success: function (data) {
             //$('.states').find("option:eq(0)").html("Select State");
             if (data.tp == 1) {
@@ -196,6 +197,9 @@ function getStates(id) {
             else {
                 alert(data.msg);
             }
+        },
+        error: function (err) {
+            alert("error" + err);
         }
     }); // završi
 
