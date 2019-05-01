@@ -2,10 +2,41 @@
     map = new Microsoft.Maps.Map(document.getElementById('divmapa'), {});
 
     $("#countryId").change(function () {
-
         var selCountry = $("option:selected", $("#countryId")).attr('countryid');
         getStates(selCountry);
+    });    
 
+    $("#stateId").change(function () {
+        var selState = $("option:selected", $("#stateId")).attr('stateid');;
+        getCities(selState);
+    });
+
+    $("#cityId").change(function () {
+        var selCountry = $("option:selected", $("#countryId")).attr('countryid');
+        var selState = $("option:selected", $("#stateId")).attr('stateid');
+        var cityname = $("#cityId").val();
+        //var urlspecial = "http://159.69.113.252/~kapluspl/tmp/cityall.php?country=" + selCountry + "&city=" + cityname;
+        var strquery = 'country=' + encodeURIComponent(selCountry) + '&city=' + encodeURIComponent(cityname);
+        var urlspecial = "http://159.69.113.252/~kapluspl/tmp/cityall.php?" + strquery;
+
+        $.ajax({
+            url: urlspecial,
+            cache: false,
+            dataType: 'JSON',
+            tyoe: 'POST',            
+            success: function (data) {
+                //alert(data);                
+                var lo = data[0].lon4;
+                var la = data[0].lat4;
+                $("#lon4").val(lo).trigger('create');
+                $("#lat4").val(la).trigger('create');
+
+            },
+            fail: function (data) {
+                alert("error 17. " + data);
+            }
+
+        });
     });
 }
 
@@ -162,7 +193,6 @@ function getStates(id) {
     //var data = {};
     $('.states').find("option:eq(0)").html("Please wait..");
     //call.send(data, url, method, function (data) {
-
     // OVO SE MORA PREPISATI
     //$.getJSON(url, function (data) {
     $.ajax({
@@ -219,7 +249,7 @@ function getCities(id) {
         addClasses = '&addClasses=' + encodeURIComponent(acC);
     }
     var addParams = '';
-    var rootUrl = "//geodata.solutions/api/api.php";
+    var rootUrl = "https://geodata.solutions/api/api.php";
     var urlspacial = rootUrl + '?type=getCities&countryId=' + $('#countryId option:selected').attr('countryid') + '&stateId=' + id + addParams + addClasses;
     var method = "post";
     var data = {};

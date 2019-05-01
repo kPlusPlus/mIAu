@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"cou",
+				"countries"
+			],
+			[
+				"co",
+				"country"
+			],
+			[
 				"font",
 				"font-size\tproperty"
 			],
@@ -49,10 +57,6 @@
 			],
 			[
 				"coun",
-				"country"
-			],
-			[
-				"co",
 				"country"
 			],
 			[
@@ -460,15 +464,6 @@
 	"buffers":
 	[
 		{
-			"file": "www/scripts/index.js",
-			"settings":
-			{
-				"buffer_size": 12114,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "/K/OneDrive/Steamer.txt",
 			"settings":
 			{
@@ -678,8 +673,14 @@
 	],
 	"file_history":
 	[
-		"/P/Cordova/mIAu/mIAu/www/index.html",
+		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/tmp/cityall.php",
+		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/tmp/citieslist.php",
+		"/P/Cordova/documents/cityall.php",
+		"/P/Cordova/documents/countrylist.php",
 		"/K/OneDrive/Steamer.txt",
+		"/P/Cordova/mIAu/.git/config",
+		"/P/Cordova/mIAu/mIAu/www/scripts/index.js",
+		"/P/Cordova/mIAu/mIAu/www/index.html",
 		"/C/Users/kresimir/Desktop/NAPRAVI.txt",
 		"/K/00moj/dokumenti/oib.txt",
 		"/P/AndroidSDK/Sdk/tools/package.xml",
@@ -799,17 +800,11 @@
 		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/tmp/memby.php",
 		"/P/temp/CR.txt",
 		"/P/Cordova/documents/moj_kalk.txt",
-		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/mIAu/bingmap.html",
-		"/P/bingmap.html",
-		"/P/Cordova/MyApp/platforms/android/app/src/main/AndroidManifest.xml",
-		"/P/Cordova/MyApp/www/js/index.js",
-		"/P/Cordova/MyApp/www/index.html",
-		"/P/Cordova/mIAu/mIAu/bin/Windows-x86/Debug/AppxManifest.xml",
-		"/P/Cordova/documents/skinuo.txt"
+		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/mIAu/bingmap.html"
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 36.0
 	},
 	"find_in_files":
 	{
@@ -997,42 +992,11 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "www/scripts/index.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 12114,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1200.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "/K/OneDrive/Steamer.txt",
 					"semi_transient": false,
 					"settings":
@@ -1044,8 +1008,8 @@
 						"selection":
 						[
 							[
-								202,
-								189
+								28,
+								28
 							]
 						],
 						"settings":
@@ -1064,7 +1028,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 34.0
+		"height": 36.0
 	},
 	"input":
 	{
@@ -1113,7 +1077,7 @@
 	"project": "miau.sublime-project",
 	"replace":
 	{
-		"height": 64.0
+		"height": 68.0
 	},
 	"save_all_on_build": false,
 	"select_file":
