@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "cordova-android": "5.2.1",
-    "cordova-ios": "4.2.0",
+    "cordova-ios": "^4.2.0",
     "cordova-plugin-calendar": "^5.1.4",
     "cordova-plugin-dialogs": "^2.0.1",
     "cordova-plugin-restful": "0.0.4",

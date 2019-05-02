@@ -101,4 +101,6 @@
   <plugin name="cordova-plugin-geolocation" spec="~2.4.3" />
   <preference name="Fullscreen" value="True" />
   <access origin="http://geodata.solutions" />
+  <plugin name="cordova-plugin-restful" spec="~0.0.3" />
+  <preference name="target-device" value="handset" />
 </widget>

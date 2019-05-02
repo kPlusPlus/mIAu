@@ -471,6 +471,16 @@
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "/C/Users/kresimir/Desktop/disk_repair.txt",
+			"settings":
+			{
+				"buffer_size": 55,
+				"encoding": "UTF-8",
+				"line_ending": "Windows",
+				"name": "disk wd10"
+			}
 		}
 	],
 	"build_system": "",
@@ -673,6 +683,14 @@
 	],
 	"file_history":
 	[
+		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/public_html/index.php",
+		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/tmp/karta.html",
+		"/P/Cordova/documents/karta.html",
+		"/P/Cordova/cordova-bootstrap-master/www/contact.html",
+		"/C/Users/kresimir/AppData/Local/Temp/_tc/cordova-bootstrap-master/www/index.html",
+		"/C/Users/kresimir/AppData/Local/Temp/_tc/cordova-bootstrap-master/config.xml",
+		"/K/OneDrive/ideja game.txt",
+		"/K/Admin/CrystalDiskMark/as-ssd-bench WDC WD10EARS-00Y5B1 21.10.2018. 11-58-15.xml",
 		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/tmp/cityall.php",
 		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/tmp/citieslist.php",
 		"/P/Cordova/documents/cityall.php",
@@ -792,19 +810,11 @@
 		"/P/Cordova/cities/readme.txt",
 		"/C/Users/kresimir/Desktop/diners.txt",
 		"/P/temp/readme.txt",
-		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/tmp/game.php",
-		"/P/Cordova/cities/US.txt",
-		"/I/Python/wordlist.lst",
-		"/P/temp/CA.txt",
-		"/C/Users/kresimir/AppData/Local/Temp/_tc/HM.txt",
-		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/tmp/memby.php",
-		"/P/temp/CR.txt",
-		"/P/Cordova/documents/moj_kalk.txt",
-		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/mIAu/bingmap.html"
+		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/tmp/game.php"
 	],
 	"find":
 	{
-		"height": 36.0
+		"height": 32.0
 	},
 	"find_in_files":
 	{
@@ -819,6 +829,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"list2",
+			"root",
 			"getStates",
 			"AndroidMainifest.xml",
 			"config.xml",
@@ -944,9 +956,7 @@
 			"grupe",
 			"1a8b49",
 			"nav",
-			"obrisi",
-			"$tb",
-			"name=\"jezik\""
+			"obrisi"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -992,7 +1002,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -1008,12 +1018,41 @@
 						"selection":
 						[
 							[
-								28,
-								28
+								2350,
+								2363
 							]
 						],
 						"settings":
 						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 3383.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Users/kresimir/Desktop/disk_repair.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 55,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								55,
+								55
+							]
+						],
+						"settings":
+						{
+							"auto_name": "disk wd10",
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -1028,7 +1067,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 36.0
+		"height": 32.0
 	},
 	"input":
 	{
@@ -1077,7 +1116,7 @@
 	"project": "miau.sublime-project",
 	"replace":
 	{
-		"height": 68.0
+		"height": 60.0
 	},
 	"save_all_on_build": false,
 	"select_file":

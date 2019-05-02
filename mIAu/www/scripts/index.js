@@ -4,7 +4,7 @@
     $("#countryId").change(function () {
         var selCountry = $("option:selected", $("#countryId")).attr('countryid');
         getStates(selCountry);
-    });    
+    });
 
     $("#stateId").change(function () {
         var selState = $("option:selected", $("#stateId")).attr('stateid');;
@@ -23,14 +23,20 @@
             url: urlspecial,
             cache: false,
             dataType: 'JSON',
-            tyoe: 'POST',            
+            tyoe: 'POST',
             success: function (data) {
-                //alert(data);                
-                var lo = data[0].lon4;
-                var la = data[0].lat4;
-                $("#lon4").val(lo).trigger('create');
-                $("#lat4").val(la).trigger('create');
-
+                //alert(data);    
+                if (data.length > 0) {
+                    var lo = data[0].lon4;
+                    var la = data[0].lat4;
+                    $("#lon4").val(lo).trigger('create');
+                    $("#lat4").val(la).trigger('create');
+                }
+                else {
+                    $("#lon4").val(0).trigger('create');
+                    $("#lat4").val(0).trigger('create');
+                    alert("location no found ");
+                }
             },
             fail: function (data) {
                 alert("error 17. " + data);
@@ -100,7 +106,7 @@ function TakeAll() {
 function TakeCountry() {
     var stype = 'getCountries';
     $.ajax({
-        url: 'https://geodata.solutions/api/api.php?type=getCountries',        
+        url: 'https://geodata.solutions/api/api.php?type=getCountries',
         method: 'POST',
         dataType: 'json',
         cache: false,
@@ -117,6 +123,16 @@ function TakeCountry() {
                     });
                 }
             }
+
+            $("#stateId").empty();
+            $("#cityId").empty();
+            // must to clear all span
+
+            $("span.countries").remove();
+            $('span.states').remove();
+            $('span.cities').remove();
+
+
 
         },
         fail: function (data) {
@@ -223,6 +239,7 @@ function getStates(id) {
                 //$(".states").click();
                 $('.states').find("option:eq(0)").html("Select state");
                 $('span.states').remove();
+                $('span.cities').remove();
             }
             else {
                 alert(data.msg);
@@ -256,7 +273,7 @@ function getCities(id) {
     $('.cities').find("option:eq(0)").html("Please wait..");
     //call.send(data, url, method, function (data) {
     //$.getJSON(url, function (data) { // promjena
-    $.ajax ({
+    $.ajax({
         url: urlspacial,
         method: 'POST',
         dataType: 'json',
@@ -370,7 +387,8 @@ var lat, lon;
 function getPosition() {
     var options = {
         enableHighAccuracy: true,
-        maximumAge: 3600000
+        maximumAge: 10000,
+        timeout: 10000
     }
     var watchID = navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
 
@@ -385,10 +403,12 @@ function getPosition() {
             'Timestamp: ' + position.timestamp + '\n');
         lat = position.coords.latitude;
         lon = position.coords.longitude;
+        return true;
     };
 
     function onError(error) {
         alert('code 12 : ' + error.code + '\n' + 'message: ' + error.message + '\n');
+        return false;
     }
 }
 
@@ -421,9 +441,11 @@ $("#btnmypos").tap(function () {
     getPosition();
     GetMap();
 
-    $("#userid").val(10);
+    //$("#userid").val(10);
+
     $("#gamelat").val(lat);
     $("#gamelon").val(lon);
+
 
 });
 

@@ -1,9 +1,8 @@
 ﻿
-*** makni glupi span kada se napune state
++++ makni glupi span kada se napune state
 
 makni 
 <span class="states">
-
 
 
 $('span.states').remove();
@@ -11,7 +10,3 @@ $('span.cities').remove();
 
 
 
-UWP App error
-The app couldn’t resolve ms-appx-web://geodata.solutions/api/api.php?type=getCountries because of this error: 80070057.
-
-prebaci sve getjson na ajax pa provjeri da li prolazi

@@ -76,7 +76,7 @@
                 <div data-role="fieldcontain">
                     <label for="divcity">Place of Birth:</label>
                     <div id="divcity">
-                        
+
                     </div>
                     <div>
                         <!-- -->
@@ -89,7 +89,6 @@
                         <select name="city" class="cities" id="cityId">
                             <option value="">Select City</option>
                         </select>
-
                         <!-- <script src="//geodata.solutions/includes/countrystatecity.js"></script> -->
                         <!-- <script src="scripts/countrystatecity.js"></script> -->
                         <!--<script src="scripts/country.js"></script>-->
@@ -127,11 +126,13 @@
                 </div>
                 <div data-role="fieldcontain">
                     <label for="email">Email:</label><input type="email" id="email" name="email" placeholder="your email" required />
-                </div>
+                </div>                
+                
                 <button id="btnsub" data-icon="check">SAVE</button>
-                <button id="btntest" data-icon="gear">TEST</button>
 
-
+                <!--
+    <button id="btnTest" data-icon="gear">TEST</button>
+        -->
 
             </form>
         </div>
@@ -141,7 +142,7 @@
             <button id="watchPosition" name="watchPosition">WATCH POSITION</button>
             <button id="btnmypos">my position</button>
 
-            userid: <input type="text" id="userid" name="userid" value="" />
+            userid: <input type="text" id="userid" name="userid" value="10" />
             lat: <input type="text" id="gamelat" name="gamelat" value="" />
             lon: <input type="text" id="gamelon" name="gamelon" value="" />
 
@@ -160,11 +161,9 @@
 
     </div>
 
-
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="scripts/platformOverrides.js"></script>
     <script type="text/javascript" src="scripts/index.js"></script>
-
 
 </body>
 </html>
