@@ -445,6 +445,19 @@ $("#btnmypos").tap(function () {
 
     $("#gamelat").val(lat);
     $("#gamelon").val(lon);
+    var urlspecial = "http://159.69.113.252/~kapluspl/tmp/game.php";
+    var membyid = $("#userid").val();
+    $.ajax({
+        url: urlspecial,
+        data: { MEMBYID: membyid, lon: lon, lat: lat },
+        type: 'POST',
+        success: function (data) {
+            alert(data);
+        },
+        fail: function (data) {
+            alert("error 18. " + data);
+        }
+    });
 
 
 });
