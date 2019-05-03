@@ -473,13 +473,12 @@
 			}
 		},
 		{
-			"file": "/C/Users/kresimir/Desktop/disk_repair.txt",
+			"contents": "\t\t\t$(\"span.countries\").remove();\n            $('span.states').remove();\n            $('span.cities').remove();",
 			"settings":
 			{
-				"buffer_size": 55,
-				"encoding": "UTF-8",
+				"buffer_size": 110,
 				"line_ending": "Windows",
-				"name": "disk wd10"
+				"name": "$(\"span.countries\").remove();"
 			}
 		}
 	],
@@ -683,6 +682,9 @@
 	],
 	"file_history":
 	[
+		"/P/Cordova/documents/game.php",
+		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/tmp/memby.php",
+		"/C/Users/kresimir/Desktop/disk_repair.txt",
 		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/public_html/index.php",
 		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/tmp/karta.html",
 		"/P/Cordova/documents/karta.html",
@@ -807,10 +809,7 @@
 		"/P/Cordova/mIAu/mIAu/www/rules.html",
 		"/P/Cordova/cities/export.csv",
 		"/P/Cordova/cities/worldcitiespop.csv",
-		"/P/Cordova/cities/readme.txt",
-		"/C/Users/kresimir/Desktop/diners.txt",
-		"/P/temp/readme.txt",
-		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/tmp/game.php"
+		"/P/Cordova/cities/readme.txt"
 	],
 	"find":
 	{
@@ -829,6 +828,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"$memby",
 			"list2",
 			"root",
 			"getStates",
@@ -955,8 +955,7 @@
 			"max-width:",
 			"grupe",
 			"1a8b49",
-			"nav",
-			"obrisi"
+			"nav"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1027,7 +1026,7 @@
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 3383.0,
+						"translation.y": 807.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -1035,24 +1034,23 @@
 				},
 				{
 					"buffer": 1,
-					"file": "/C/Users/kresimir/Desktop/disk_repair.txt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 55,
+						"buffer_size": 110,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								55,
-								55
+								3,
+								3
 							]
 						],
 						"settings":
 						{
-							"auto_name": "disk wd10",
+							"auto_name": "$(\"span.countries\").remove();",
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -1116,7 +1114,7 @@
 	"project": "miau.sublime-project",
 	"replace":
 	{
-		"height": 60.0
+		"height": 80.0
 	},
 	"save_all_on_build": false,
 	"select_file":
