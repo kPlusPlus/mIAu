@@ -480,6 +480,17 @@
 				"line_ending": "Windows",
 				"name": "$(\"span.countries\").remove();"
 			}
+		},
+		{
+			"contents": "<?php\t    \n    header('content-type: text/html; charset=utf-8');\n    header(\"Access-Control-Allow-Origin: *\");\n    //header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS'); // ToDo: after remove this is extremly dangerous\n    error_reporting(E_ALL | E_STRICT);\n\trequire_once __DIR__ . '/vendor/autoload.php';\n\t\n\tuse \\RedBeanPHP\\R as R;\n    R::setup( 'mysql:host=159.69.113.252;dbname=kapluspl_miau',\n        'maniac', 'F3VA55TpNfsA' );\n\n\n    $memby = R::dispense('memby');\n    \n    if(isset($_POST['name']))\n        $memby->name = $_POST['name'];\n    \n    if(isset($_POST['surname']))\n        $memby->surname = $_POST['surname'];\n\n    if(isset($_POST['iam']))\n        $memby->gender = intval(htmlentities($_POST['iam'], ENT_QUOTES, \"UTF-8\"));\n    \n    if(isset($_POST['searchfor']))\n        $memby->search = intval(htmlentities($_POST['searchfor'], ENT_QUOTES, \"UTF-8\"));\n\n    if(isset($_POST['relation']))\n        $memby->relation = intval(htmlentities($_POST['relation'], ENT_QUOTES, \"UTF-8\"));\n\n    if(isset($_POST['birthdate']))\n        $memby->birthdate = $_POST['birthdate'];\n\n    if(isset($_POST['email']))\n        $memby->email = $_POST['email'];\n\n    if(isset($_POST['birthtime']))\n        $memby->birthtime = $_POST['birthtime'];\n\n    if(isset($_POST['selcity']))\n        $memby->citiesid = $_POST['selcity'];\n\n    $id = R::store( $memby );\n\n    echo \" \".$id;\n    \n?>",
+			"file": "/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/tmp/memby.php",
+			"file_size": 1394,
+			"file_write_time": 132013854457463553,
+			"settings":
+			{
+				"buffer_size": 1394,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -682,7 +693,10 @@
 	],
 	"file_history":
 	[
+		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/tmp/game.php",
+		"/P/phpMVC/vendor/composer/installed.json",
 		"/P/Cordova/documents/game.php",
+		"/D/Program Files (x86)/UltraISOPortable/App/UltraISO/History.txt",
 		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/tmp/memby.php",
 		"/C/Users/kresimir/Desktop/disk_repair.txt",
 		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/public_html/index.php",
@@ -806,10 +820,7 @@
 		"/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/tmp/php.ini",
 		"/P/Cordova/cordova-bootstrap-master/package-lock.json",
 		"/P/temp/dump_kapluspl_miau.sql",
-		"/P/Cordova/mIAu/mIAu/www/rules.html",
-		"/P/Cordova/cities/export.csv",
-		"/P/Cordova/cities/worldcitiespop.csv",
-		"/P/Cordova/cities/readme.txt"
+		"/P/Cordova/mIAu/mIAu/www/rules.html"
 	],
 	"find":
 	{
@@ -1001,7 +1012,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -1017,8 +1028,8 @@
 						"selection":
 						[
 							[
-								2350,
-								2363
+								168,
+								159
 							]
 						],
 						"settings":
@@ -1026,10 +1037,10 @@
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 807.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -1044,8 +1055,8 @@
 						"selection":
 						[
 							[
-								3,
-								3
+								110,
+								110
 							]
 						],
 						"settings":
@@ -1057,7 +1068,37 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/Users/kresimir/AppData/Local/Temp/_tcx/0/0/tmp/memby.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1394,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								524,
+								524
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -1114,7 +1155,7 @@
 	"project": "miau.sublime-project",
 	"replace":
 	{
-		"height": 80.0
+		"height": 60.0
 	},
 	"save_all_on_build": false,
 	"select_file":

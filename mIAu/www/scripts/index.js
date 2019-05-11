@@ -46,6 +46,9 @@
     });
 }
 
+
+var USRID = -1;
+
 $(document).on("tap", "#btnCountry", function () {
     TakeCountry();
     return false;
@@ -354,6 +357,45 @@ $("#btntest").tap(function () {
     });
 });
 
+$("#usrlogon").tap(function () {
+
+    var useremail = $("#useremail").val();
+    var userpsw = $("#userpsw").val();
+
+    if (useremail == "") {
+        alert("Input user email");
+        $("#useremail").focus();
+        return false;
+    }
+
+    if (userpsw == "") {
+        alert("Input user password");
+        $("#userpsw").focus();
+        return false;
+    }
+
+    $.ajax({
+        url: 'http://159.69.113.252/~kapluspl/tmp/cmemb.php',
+        data: { "useremail": useremail, "userpsw": userpsw },              // $('#formA').serialize(),
+        type: "POST",
+        success: function (data) {            
+            if (data.valueOf() == 'no user'.valueOf()) {
+                alert("no user with this login");
+                return false;
+            }
+            
+            USRID = data;            
+        },
+        fail: function (data) {
+            alert('Err 16. Internet connection problem');
+        }
+    }
+    );
+
+
+    
+})
+
 $("#btnpublic").tap(function () {
     HideAll();
     ShowPage(2);
@@ -364,10 +406,16 @@ $("#btnhome").tap(function () {
     ShowPage(1);
 });
 
+$("#btnlogin").tap(function () {
+    HideAll();
+    ShowPage(3);
+});
+
 function HideAll() {
 
     $("#body1").hide();
     $("#body2").hide();
+    $("#body3").hide();
 }
 
 function ShowPage(pageno) {
