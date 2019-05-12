@@ -379,11 +379,12 @@ $("#usrlogon").tap(function () {
         data: { "useremail": useremail, "userpsw": userpsw },              // $('#formA').serialize(),
         type: "POST",
         success: function (data) {            
-            if (data.valueOf() == 'no user'.valueOf()) {
+            if (data === 'no user') {
                 alert("no user with this login");
                 return false;
             }
-            
+            HideAll();
+            ShowPage(2);
             USRID = data;            
         },
         fail: function (data) {
