@@ -47,13 +47,14 @@
 }
 
 
+/* INIT */
 var USRID = -1;
+var map;
 
 $(document).on("tap", "#btnCountry", function () {
     TakeCountry();
     return false;
 });
-
 
 $("#btnTest").tap(function () {
     alert("RRR");
@@ -143,53 +144,6 @@ function TakeCountry() {
         }
     });
 }
-
-
-// ToDo: new function
-/*
-function TakeCountry() {
-    var rootUrl = "//geodata.solutions/api/api.php?type=getCountries";
-    var call = new ajaxCall();    
-    var url = rootUrl;
-    var method = "post";
-    var data = {};
-
-    //$.getJSON(rootUrl, function (data) {
-    call.send(data, url, method, function (data) {
-        alert(data);
-        if (data.tp == 1) {
-            var listlen = Object.keys(data['result']).length;
-            if (listlen > 0) {
-                $.each(data['result'], function (key, val) {
-                    var option = $('<option />');
-                    option.attr('value', val).text(val);
-                    option.attr('countryid', key);
-                    $('#countryId').append(option);
-                });
-            }
-        }       
-
-    });
-}
-*/
-
-/*
-
-$("#countryId").change(function () {
-    var selCountry = $("option:selected", $("#countryId")).attr('countryid');
-    getStates(selCountry);
-});
-
-$('#stateId').change(function () {
-    var selState = $("option:selected", $("#stateId")).attr('stateid');;
-    getCities(selState);
-});
-
-$(document).on('change', '#stateId', function () {
-    alert("Changed!");
-});
-
-*/
 
 
 function getStates(id) {
@@ -323,6 +277,7 @@ function getCities(id) {
     });
 };
 
+/* preloader */
 $(document).ajaxStart(function () {
     $("#waitcity").css("display", "block");
 });
@@ -491,9 +446,11 @@ $("#btnmypos").tap(function () {
     GetMap();
 
     //$("#userid").val(10);
-
     $("#gamelat").val(lat);
     $("#gamelon").val(lon);
+    var slat = String(lat).replace(",", ".");
+    var slon = String(lon).replace(",", ".");
+
     var urlspecial = "http://159.69.113.252/~kapluspl/tmp/game.php";
     var membyid = $("#userid").val();
     $.ajax({
@@ -511,7 +468,12 @@ $("#btnmypos").tap(function () {
 
 });
 
-var map;
+$("#btnneighbour").tap(function () {
+    alert("tap tap tap");
+    
+});
+
+
 function GetMap() {
 
     //Request the user's location
@@ -527,34 +489,6 @@ function GetMap() {
         //Center the map on the user's location.
         map.setView({ center: loc, zoom: 15 });
     });
-
-}
-
-
-function ajaxCall() {
-    this.send = function (data, url, method, success, type) {
-        type = type || 'json';
-        var successRes = function (data) {
-            success(data);
-        }
-
-        var errorRes = function (e) {
-            console.log(e);
-            //alert("Error found \nError Code: "+e.status+" \nError Message: "+e.statusText);
-            //$('#loader').modal('hide');
-        }
-        $.ajax({
-            url: url,
-            //cache: false,
-            type: method,
-            data: data,
-            success: successRes,
-            error: errorRes,
-            dataType: type,
-            timeout: 60000
-        });
-
-    }
 
 }
 
