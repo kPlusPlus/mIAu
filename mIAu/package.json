@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "cordova-android": "5.2.1",
-    "cordova-ios": "^4.2.0",
+    "cordova-android": "^5.2.2",
+    "cordova-ios": "^4.5.5",
     "cordova-plugin-calendar": "^5.1.4",
     "cordova-plugin-dialogs": "^2.0.1",
     "cordova-plugin-restful": "0.0.4",

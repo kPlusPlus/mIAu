@@ -131,13 +131,9 @@ function TakeCountry() {
             $("#stateId").empty();
             $("#cityId").empty();
             // must to clear all span
-
             $("span.countries").remove();
             $('span.states').remove();
             $('span.cities').remove();
-
-
-
         },
         fail: function (data) {
             alert('Err 4. Country list problem');
@@ -391,13 +387,14 @@ var lat, lon;
 function getPosition() {
     var options = {
         enableHighAccuracy: true,
-        maximumAge: 10000,
-        timeout: 10000
+        //maximumAge: 60000,
+        timeout: 60000
     }
     var watchID = navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
 
     function onSuccess(position) {
-        alert('Latitude: ' + position.coords.latitude + '\n' +
+        // debug only alert
+        showMessage('Latitude: ' + position.coords.latitude + '\n' +
             'Longitude: ' + position.coords.longitude + '\n' +
             'Altitude: ' + position.coords.altitude + '\n' +
             'Accuracy: ' + position.coords.accuracy + '\n' +
@@ -411,7 +408,7 @@ function getPosition() {
     };
 
     function onError(error) {
-        alert('code 12 : ' + error.code + '\n' + 'message: ' + error.message + '\n');
+        showMessage('code 12 : ' + error.code + '\n' + 'message: ' + error.message + '\n');
         return false;
     }
 }
@@ -437,7 +434,7 @@ function watchPosition() {
     };
 
     function onError(error) {
-        alert('code: ' + error.code + '\n' + 'message: ' + error.message + '\n');
+        alert('error 505 code: ' + error.code + '\n' + 'message: ' + error.message + '\n');
     }
 }
 
@@ -447,9 +444,7 @@ $("#btnmypos").tap(function () {
 
     //$("#userid").val(10);
     $("#gamelat").val(lat);
-    $("#gamelon").val(lon);
-    var slat = String(lat).replace(",", ".");
-    var slon = String(lon).replace(",", ".");
+    $("#gamelon").val(lon);    
 
     var urlspecial = "http://159.69.113.252/~kapluspl/tmp/game.php";
     var membyid = $("#userid").val();
@@ -457,20 +452,19 @@ $("#btnmypos").tap(function () {
         url: urlspecial,
         data: { MEMBYID: membyid, lon: lon, lat: lat },
         type: 'POST',
-        success: function (data) {
-            alert(data);
+        success: function (data) {            
+            showMessage(data);
         },
         fail: function (data) {
-            alert("error 18. " + data);
+            showMessage("error 18. " + data);
         }
     });
 
-
 });
 
+
 $("#btnneighbour").tap(function () {
-    alert("tap tap tap");
-    
+    showMessage("tap tap tap");    
 });
 
 
@@ -490,5 +484,14 @@ function GetMap() {
         map.setView({ center: loc, zoom: 15 });
     });
 
+}
+
+function showMessage(mess) {
+    navigator.notification.alert(
+        mess,   // message
+        null,   // callback
+        'Info', // title
+        'Done'  // buttonName
+    );
 }
 

@@ -12,9 +12,3 @@
 
 
 --- logon forma
-
-
-
-INSERT INTO `game` (`ID`, `membyid`, `lon`, `lat`, `status`, `lasttime`) VALUES (NULL, '11', '123.456789', '123.456789', '1', NULL);
-
-INSERT INTO `game` (`ID`, `membyid`, `lon`, `lat`, `status`, `lasttime`) VALUES (NULL, '11', 123.456, '123.456', '1', NULL);
