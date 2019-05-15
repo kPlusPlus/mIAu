@@ -48,8 +48,9 @@
 
 
 /* INIT */
-var USRID = -1;
-var map;
+    var USRID = -1;
+    var map;
+    var lat, lon;
 
 $(document).on("tap", "#btnCountry", function () {
     TakeCountry();
@@ -383,12 +384,13 @@ $("#watchPosition").tap(function () {
     watchPosition();
 });
 
-var lat, lon;
+
 function getPosition() {
+    
     var options = {
         enableHighAccuracy: true,
-        //maximumAge: 60000,
-        timeout: 60000
+        maximumAge: Infinity,
+        timeout: 10000
     }
     var watchID = navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
 
@@ -411,6 +413,7 @@ function getPosition() {
         showMessage('code 12 : ' + error.code + '\n' + 'message: ' + error.message + '\n');
         return false;
     }
+
 }
 
 
@@ -423,7 +426,7 @@ function watchPosition() {
     var watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
 
     function onSuccess(position) {
-        alert('Latitude: ' + position.coords.latitude + '\n' +
+        showMessage('Latitude: ' + position.coords.latitude + '\n' +
             'Longitude: ' + position.coords.longitude + '\n' +
             'Altitude: ' + position.coords.altitude + '\n' +
             'Accuracy: ' + position.coords.accuracy + '\n' +
@@ -439,12 +442,17 @@ function watchPosition() {
 }
 
 $("#btnmypos").tap(function () {
-    getPosition();
-    GetMap();
+    //getPosition();
+    //GetMap();
+    getLocation();
 
     //$("#userid").val(10);
     $("#gamelat").val(lat);
-    $("#gamelon").val(lon);    
+    $("#gamelon").val(lon);
+
+    if (lat == undefined) return false;
+    if (lon == undefined) return false;
+
 
     var urlspecial = "http://159.69.113.252/~kapluspl/tmp/game.php";
     var membyid = $("#userid").val();
@@ -469,13 +477,24 @@ $("#btnneighbour").tap(function () {
 
 
 function GetMap() {
+    /*
+    var map = new Microsoft.Maps.Map('#divmapa', {
+        credentials: "AusV1uMb4S4PqNZj3miJ4KX2HkfIoZzGHu8ZUfGN7RxCP2y41-OHeWMtBEAHLr3I"
+    });
+    */
+    var options = {
+        maximumAge: 3600000,
+        timeout: 3000,
+        enableHighAccuracy: true,
+    }
 
     //Request the user's location
     navigator.geolocation.getCurrentPosition(function (position) {
         var loc = new Microsoft.Maps.Location(
             position.coords.latitude,
             position.coords.longitude);
-
+        lat = position.coords.latitude;
+        lon = position.coords.longitude;
         //Add a pushpin at the user's location.
         var pin = new Microsoft.Maps.Pushpin(loc);
         map.entities.push(pin);
@@ -495,3 +514,30 @@ function showMessage(mess) {
     );
 }
 
+function showLocation(position) {
+    var latitude = position.coords.latitude;
+    var longitude = position.coords.longitude;
+    showMessage("Latitude : " + latitude + " Longitude: " + longitude);
+}
+
+function errorHandler(err) {
+    if (err.code == 1) {
+        showMessage("Error: Access is denied!");
+    } else if (err.code == 2) {
+        showMessage("Error: Position is unavailable!");
+    } else if (err.code == 3) {
+        showMessage("Error TIMEOUT SHUT");
+    }
+}
+
+function getLocation() {
+
+    if (navigator.geolocation) {
+
+        // timeout at 60000 milliseconds (60 seconds)
+        var options = { timeout: 60000 };
+        navigator.geolocation.getCurrentPosition(showLocation, errorHandler, options);
+    } else {
+        showMessage("Sorry, browser does not support geolocation!");
+    }
+}

@@ -12,3 +12,8 @@
 
 
 --- logon forma
+
+-- 
+
+Latitude: 45.8006528
+Longitude: 15.971123199999997

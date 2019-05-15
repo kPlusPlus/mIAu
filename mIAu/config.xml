@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<widget defaultlocale="en-US" id="io.cordova.myappd03003" version="1.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps" android-versionCode="4">
+<widget defaultlocale="en-US" id="io.cordova.myappd03003" version="1.0.5" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps" android-versionCode="">
   <name>mIAu</name>
   <description>development</description>
   <author email="dev@cordova.apache.org" href="http://cordova.io">kaplusplus</author>
@@ -89,7 +89,7 @@
   </platform>
   <plugin name="cordova-plugin-whitelist" spec="~1.3.3" />
   <vs:toolsetVersion>6.3.1</vs:toolsetVersion>
-  <engine name="android" spec="~5.2.1" />
+  <engine name="android" spec="5.2.1" />
   <engine name="ios" spec="4.2.0" />
   <engine name="windows" spec="4.4.2" />
   <preference name="AndroidLaunchMode" value="standard" />
@@ -101,5 +101,8 @@
   <preference name="Fullscreen" value="True" />
   <access origin="http://geodata.solutions" />
   <plugin name="cordova-plugin-restful" spec="~0.0.3" />
-  <preference name="target-device" value="handset" />
+  <preference name="target-device" value="universal" />
+  <preference name="WindowsStoreDisplayName" value="mIAu" />  
+  <access origin="*.bing.com" subdomains="true" /> <!-- k++ -->
+  <access origin="*.virtualearth.net" subdomains="true" />  <!-- k++ -->
 </widget>
