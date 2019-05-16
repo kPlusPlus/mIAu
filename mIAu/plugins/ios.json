@@ -19,11 +19,11 @@
     "cordova-plugin-device-orientation": {
       "PACKAGE_NAME": "io.cordova.myappd03003"
     },
-    "cordova-plugin-geolocation": {
-      "GEOLOCATION_USAGE_DESCRIPTION": " ",
+    "cordova-plugin-restful": {
       "PACKAGE_NAME": "io.cordova.myappd03003"
     },
-    "cordova-plugin-restful": {
+    "cordova-plugin-geolocation": {
+      "GEOLOCATION_USAGE_DESCRIPTION": "To locate you",
       "PACKAGE_NAME": "io.cordova.myappd03003"
     }
   },

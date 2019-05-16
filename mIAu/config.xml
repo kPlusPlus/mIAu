@@ -88,21 +88,23 @@
     <splash height="1920" src="res/screens/windows/SplashScreenPhone.scale-240.png" width="1152" />
   </platform>
   <plugin name="cordova-plugin-whitelist" spec="~1.3.3" />
-  <vs:toolsetVersion>6.3.1</vs:toolsetVersion>
-  <engine name="android" spec="5.2.1" />
-  <engine name="ios" spec="4.2.0" />
-  <engine name="windows" spec="4.4.2" />
   <preference name="AndroidLaunchMode" value="standard" />
   <preference name="BackupWebStorage" value="local" />
   <plugin name="cordova-plugin-dialogs" spec="~2.0.1" />
   <plugin name="cordova-plugin-device" spec="~2.0.2" />
   <plugin name="cordova-plugin-device-orientation" spec="~2.0.1" />
-  <plugin name="cordova-plugin-geolocation" spec="~2.4.3" />
   <preference name="Fullscreen" value="True" />
   <access origin="http://geodata.solutions" />
   <plugin name="cordova-plugin-restful" spec="~0.0.3" />
   <preference name="target-device" value="universal" />
-  <preference name="WindowsStoreDisplayName" value="mIAu" />  
-  <access origin="*.bing.com" subdomains="true" /> <!-- k++ -->
-  <access origin="*.virtualearth.net" subdomains="true" />  <!-- k++ -->
+  <preference name="WindowsStoreDisplayName" value="mIAu" />
+  <access origin="*.bing.com" subdomains="true" />
+  <!-- k++ -->
+  <access origin="*.virtualearth.net" subdomains="true" />
+  <!-- k++ -->
+  <vs:toolsetVersion>6.3.1</vs:toolsetVersion>
+  <engine name="android" spec="5.2.1" />
+  <engine name="ios" spec="4.2.0" />
+  <engine name="windows" spec="4.4.2" />
+  <plugin name="cordova-plugin-geolocation" spec="~2.4.3" />
 </widget>

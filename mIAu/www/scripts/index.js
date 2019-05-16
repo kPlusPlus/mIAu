@@ -44,12 +44,14 @@
 
         });
     });
+
+
 }
 
 
 /* INIT */
     var USRID = -1;
-    var map;
+    var map, geoLocationProvider;
     var lat, lon;
 
 $(document).on("tap", "#btnCountry", function () {
@@ -389,10 +391,10 @@ function getPosition() {
     
     var options = {
         enableHighAccuracy: true,
-        maximumAge: Infinity,
-        timeout: 10000
-    }
-    var watchID = navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
+        maximumAge: 3000,
+        timeout: 5000
+    };
+    var watchID = navigator.geolocation.getCurrentPosition(onSuccess, onError, options);    
 
     function onSuccess(position) {
         // debug only alert
@@ -406,6 +408,10 @@ function getPosition() {
             'Timestamp: ' + position.timestamp + '\n');
         lat = position.coords.latitude;
         lon = position.coords.longitude;
+
+        navigator.geolocation.clearWatch(watchID);
+        
+
         return true;
     };
 
@@ -442,9 +448,9 @@ function watchPosition() {
 }
 
 $("#btnmypos").tap(function () {
-    //getPosition();
+    getPosition();
     //GetMap();
-    getLocation();
+    //getLocation();
 
     //$("#userid").val(10);
     $("#gamelat").val(lat);
@@ -472,19 +478,40 @@ $("#btnmypos").tap(function () {
 
 
 $("#btnneighbour").tap(function () {
-    showMessage("tap tap tap");    
+    showMessage("tap tap tap");
+    GetMap();
+
+    /*
+    if (!geoLocationProvider) {
+        geoLocationProvider = new Microsoft.Maps.GeoLocationProvider(map);
+    }
+
+    geoLocationProvider.getCurrentPosition({
+        successCallback: function (e) {
+            showMessage("qqqq");
+            gpsLayer.push(new Microsoft.Maps.Pushpin(e.center));
+            showMessage(e.center);
+        },
+        errorCallback: function (e) {
+            showMessage(e.internalError);
+        }
+    });
+    */
 });
 
 
+
+
+
 function GetMap() {
-    /*
+  
     var map = new Microsoft.Maps.Map('#divmapa', {
         credentials: "AusV1uMb4S4PqNZj3miJ4KX2HkfIoZzGHu8ZUfGN7RxCP2y41-OHeWMtBEAHLr3I"
     });
-    */
+  
     var options = {
         maximumAge: 3600000,
-        timeout: 3000,
+        timeout: 10000,
         enableHighAccuracy: true,
     }
 
@@ -504,6 +531,22 @@ function GetMap() {
     });
 
 }
+
+/*
+
+function GetMap() {
+    var mapOptions = {
+        credentials: "AusV1uMb4S4PqNZj3miJ4KX2HkfIoZzGHu8ZUfGN7RxCP2y41-OHeWMtBEAHLr3I"
+    };
+
+    // Initialize the map
+    map = new Microsoft.Maps.Map(document.getElementById("divmapa"), mapOptions);
+
+    gpsLayer = new Microsoft.Maps.EntityCollection();
+    map.entities.push(gpsLayer);
+}
+
+*/
 
 function showMessage(mess) {
     navigator.notification.alert(
@@ -535,9 +578,12 @@ function getLocation() {
     if (navigator.geolocation) {
 
         // timeout at 60000 milliseconds (60 seconds)
-        var options = { timeout: 60000 };
+        var options = { timeout: 10000, enableHighAccuracy: false };
         navigator.geolocation.getCurrentPosition(showLocation, errorHandler, options);
     } else {
         showMessage("Sorry, browser does not support geolocation!");
     }
 }
+
+
+$
