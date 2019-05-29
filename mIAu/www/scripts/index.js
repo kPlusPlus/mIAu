@@ -1,4 +1,8 @@
-﻿function onLoad() {
+﻿
+// INIT
+var serverurl = "http://kaplusplus.com/tmp/";
+
+function onLoad() {
     map = new Microsoft.Maps.Map(document.getElementById('divmapa'), {});
 
     $("#countryId").change(function () {
@@ -14,10 +18,9 @@
     $("#cityId").change(function () {
         var selCountry = $("option:selected", $("#countryId")).attr('countryid');
         var selState = $("option:selected", $("#stateId")).attr('stateid');
-        var cityname = $("#cityId").val();
-        //var urlspecial = "http://159.69.113.252/~kapluspl/tmp/cityall.php?country=" + selCountry + "&city=" + cityname;
+        var cityname = $("#cityId").val();        
         var strquery = 'country=' + encodeURIComponent(selCountry) + '&city=' + encodeURIComponent(cityname);
-        var urlspecial = "http://159.69.113.252/~kapluspl/tmp/cityall.php?" + strquery;
+        var urlspecial = serverurl + "cityall.php?" + strquery;
 
         $.ajax({
             url: urlspecial,
@@ -83,7 +86,7 @@ $(document).on('change', "#selcity", function () {
 
 $("#btnsub").tap(function () {
     $.ajax({
-        url: 'http://159.69.113.252/~kapluspl/tmp/memby.php',
+        url: serverurl + 'memby.php',
         data: $("#forma").serialize(),
         cache: false,
         type: "POST",
@@ -98,7 +101,7 @@ $("#btnsub").tap(function () {
 
 function TakeAll() {
     $.ajax({
-        url: 'http://159.69.113.252/~kapluspl/tmp/countrylist.php',
+        url: serverurl + 'countrylist.php',
         cache: false,
         success: function (data) {
             $("#divcountry").html(data);
@@ -286,7 +289,7 @@ $(document).ajaxComplete(function () {
 
 function TakeCity(codecountry) {
     $.ajax({
-        url: 'http://159.69.113.252/~kapluspl/tmp/citieslist.php',
+        url: serverurl + 'citieslist.php',
         data: { "country": codecountry },              // $('#formA').serialize(),
         type: "POST",
         success: function (data) {
@@ -329,7 +332,7 @@ $("#usrlogon").tap(function () {
     }
 
     $.ajax({
-        url: 'http://159.69.113.252/~kapluspl/tmp/cmemb.php',
+        url: serverurl + 'cmemb.php',
         data: { "useremail": useremail, "userpsw": userpsw },              // $('#formA').serialize(),
         type: "POST",
         success: function (data) {            
@@ -460,7 +463,7 @@ $("#btnmypos").tap(function () {
     if (lon == undefined) return false;
 
 
-    var urlspecial = "http://159.69.113.252/~kapluspl/tmp/game.php";
+    var urlspecial = serverurl + "game.php";
     var membyid = $("#userid").val();
     $.ajax({
         url: urlspecial,
@@ -584,6 +587,3 @@ function getLocation() {
         showMessage("Sorry, browser does not support geolocation!");
     }
 }
-
-
-$
