@@ -4,14 +4,14 @@
   "private": true,
   "dependencies": {
     "cordova-android": "^8.0.0",
-    "cordova-ios": "^4.5.5",
+    "cordova-ios": "^6.2.0",
     "cordova-plugin-calendar": "^5.1.4",
     "cordova-plugin-dialogs": "^2.0.1",
     "cordova-plugin-geolocation": "^2.4.3",
     "cordova-plugin-gpslocation": "^1.0.0",
     "cordova-plugin-restful": "0.0.4",
     "cordova-plugin-whitelist": "^1.3.3",
-    "cordova-windows": "4.4.2"
+    "cordova-windows": "7.0.1"
   },
   "cordova": {
     "plugins": {
